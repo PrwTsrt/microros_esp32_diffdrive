@@ -98,3 +98,10 @@ If you do not modify it now and need to recompile, you can enter the following c
 cd ~/esp/Samples/extra_components/micro_ros_espidf_component/examples/<your_project>
 idf.py clean-microros
 ```
+### Download microros firmware
+Download the firmware to ~/esp/Samples/extra_component.
+```bash
+cd ~/esp/Samples/extra_components/micro_ros_espidf_component
+git clone https://github.com/PrwTsrt/microros_esp32_diffdrive
+cd microros_esp32_diffdrive
+```
