@@ -32,7 +32,7 @@ Add the installed tools to the PATH environment variable.To make the tools usabl
 ```bash
 source ~/esp/esp-idf/export.sh
 ```
-### Confige, compile and flash firmware
+### Configure, compile and flash firmware
 Now connect your ESP32 board to the computer and check under which serial port the board is visible. Navigate to your directory, set ESP32-S3 as the target, and run the project configuration utility menuconfig. You are using this menu to set up project variables.
 ```bash
 cd ~/esp/esp-idf/examples/get-started/hello_world
@@ -73,7 +73,7 @@ pip3 install catkin_pkg lark-parser empy colcon-common-extensions
 ### Modify microros configuration
 The default microros configuration only supports 1 node, 2 publishers, 2 subscribers, 1 service, 1 client, and 1 history record.
 
-You can modify the colcon.meta file in the micro_ros_espidf_component directory, find the "rmw_microxrcedds" column, and modify these settings based on the actual requirements. For this project, I will set the publishers, subscribers, and history records to are all modified to 3, To enable communication via UART, I will set the transport mode to 'custom'.
+You can modify the colcon.meta file in the micro_ros_espidf_component directory, find the "rmw_microxrcedds" column, and modify these settings based on the actual requirements. For this project, I will set the publishers, subscribers, and history records to are all modified to 3, To enable communication via USB/UART, I will set the transport mode to 'custom'.
 ```bash
 cd ~/esp/Samples/extra_components/micro_ros_espidf_component
 nano colcon.meta
@@ -99,9 +99,71 @@ cd ~/esp/Samples/extra_components/micro_ros_espidf_component/examples/<your_proj
 idf.py clean-microros
 ```
 ### Download microros firmware
-Download the firmware to ~/esp/Samples/extra_component.
+Download the firmware to ~/esp/Samples/extra_component/micro_ros_espidf_component.
 ```bash
 cd ~/esp/Samples/extra_components/micro_ros_espidf_component
 git clone https://github.com/PrwTsrt/microros_esp32_diffdrive
 cd microros_esp32_diffdrive
+```
+
+## Install and start microros agent
+Install ROS 2 Humble on your Ubuntu 22.04 LTS, [as instructed here.](https://docs.ros.org/en/humble/Installation.html) Once you have a ROS 2 installation, follow these steps to install and start microros agent.
+
+### Install tinyxml2 dependencies
+Enter the following command in the terminal to install tinyxml2.
+```bash
+cd ~/
+git clone https://github.com/leethomason/tinyxml2.git
+cd tinyxml2
+mkdir build && cd build
+sudo cmake ..
+sudo make
+sudo make install
+```
+### Install python3-rosdep tool
+Enter the following command in the terminal to install the rosdep tool.
+```bash
+sudo apt install python3-rosdep
+```
+### Compile micro_ros_setup environment
+Activate the ROS2 environment variable.
+```bash
+source /opt/ros/humble/setup.bash
+```
+Create and enter the uros_ws workspace.
+```bash
+mkdir ~/uros_ws && cd ~/uros_ws
+mkdir src
+```
+Download the micro_ros_setup file to the src folder
+```bash
+git clone -b humble https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup
+```
+Initialize rosdep
+```bash
+sudo rosdep init
+```
+Update rosdep and install related driver packages
+```bash
+rosdep update && rosdep install --from-paths src --ignore-src -y
+```
+Compile workspace
+```bash
+colcon build
+```
+Activate micro_ros_setup environment
+```bash
+source install/local_setup.bash
+```
+### Compile micro_ros_agent environment
+```bash
+ros2 run micro_ros_setup create_agent_ws.sh
+ros2 run micro_ros_setup build_agent.sh
+```
+### Start microros agent
+ --dev /dev/ttyUSB0 is the serial port device number, and -b 921600 is the baud rate. Modifications can be made according to your conditions.
+```bash
+source /opt/ros/humble/setup.bash
+source ~/uros_ws/install/local_setup.sh
+ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0 -b 921600 -v4
 ```
