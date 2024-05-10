@@ -176,5 +176,22 @@ source ~/esp/esp-idf/export.sh
 idf.py set-target esp32s3
 idf.py menuconfig
 ```
-![Alt text](image/config_1.png)
-![Alt text](image/config_3.png)
+By default, micro-ROS component uses UDP transport, To enable UART transport, navigate to `micro-ROS Setting -> micro-ROS network interface select` then select `Micro XRCE-DDS over UART`.
+
+<div align="center">
+<img src="image/config_3.png" alt="config_2" style="max-width: 75%; height: auto;">
+</div>
+
+```bash
+idf.py build
+idf.py flash
+idf.py monitor
+```
+After startup, the serial port simulator shows garbled characters due to the incompatible default baud rate and non-character data sent by micro-ROS. Press `Ctrl+]` to exit. Next, start the micro-ROS agent using these commands.
+
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/uros_ws/install/local_setup.sh
+ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0 -b 921600 -v4
+```
