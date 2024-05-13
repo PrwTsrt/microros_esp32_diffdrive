@@ -47,7 +47,7 @@ If there are no errors, the build finishes by generating the firmware binary .bi
 ```bash
 idf.py flash
 ```
-Launches the IDF Monitor application
+Launches the IDF Monitor application. Press `Ctrl+]` to exit.
 ```bash
 idf.py monitor
 ```

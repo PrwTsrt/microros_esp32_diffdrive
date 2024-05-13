@@ -9,7 +9,7 @@
 #define UART_CTS  (CONFIG_MICROROS_UART_CTS)
 
 // --- micro-ROS Transports ---
-#define UART_BUFFER_SIZE (512)
+#define UART_BUFFER_SIZE (1024)
 
 bool esp32_serial_open(struct uxrCustomTransport * transport){
     size_t * uart_port = (size_t*) transport->args;
