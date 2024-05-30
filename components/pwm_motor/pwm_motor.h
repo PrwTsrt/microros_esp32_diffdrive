@@ -8,11 +8,11 @@ extern "C" {
 #include "stdint.h"
 
 // 电机引脚引脚定义 Motor pin pin definition
-#define PWM_GPIO_M1A              5
-#define PWM_GPIO_M1B              4
+#define PWM_GPIO_M1A              16
+#define PWM_GPIO_M1B              15
 
-#define PWM_GPIO_M2A              15
-#define PWM_GPIO_M2B              16
+#define PWM_GPIO_M2A              4
+#define PWM_GPIO_M2B              5
 
 #define PWM_GPIO_M3A              9
 #define PWM_GPIO_M3B              10

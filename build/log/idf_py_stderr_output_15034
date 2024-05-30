@@ -1,0 +1,104 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB1 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375418: call_start_cpu1 at /home/smr/esp/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200a243: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:414
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200fab7: rmw_uxrce_transport_init at ??:?
+0x4200efc0: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200fab7: rmw_uxrce_transport_init at ??:?
+0x4200efc0: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200fab7: rmw_uxrce_transport_init at ??:?
+0x4200efc0: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200fab7: rmw_uxrce_transport_init at ??:?
+0x4200efc0: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40378a8e: esp_crosscore_isr at /home/smr/esp/esp-idf/components/esp_system/crosscore_int.c:96
+0x40376f71: _xt_lowint1 at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x4200ef91: rmw_uros_ping_agent at ??:?
+0x4200a24c: micro_ros_task at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/main.c:418
+0x4037dd75: vPortTaskWrapper at /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0m

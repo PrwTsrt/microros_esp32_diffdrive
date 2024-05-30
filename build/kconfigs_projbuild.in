@@ -1,0 +1,7 @@
+source "/home/smr/esp/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/home/smr/esp/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "/home/smr/esp/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "/home/smr/esp/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/home/smr/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/Kconfig.projbuild"
+source "/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/Kconfig.projbuild"

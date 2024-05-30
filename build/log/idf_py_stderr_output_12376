@@ -1,0 +1,1246 @@
+Compiler supported targets: xtensa-esp32s3-elf
+
+Cloning into 'src/ament_cmake'...
+Cloning into 'src/Micro-XRCE-DDS-Client'...
+Cloning into 'src/ament_lint'...
+Cloning into 'src/ament_package'...
+Cloning into 'src/googletest'...
+Cloning into 'src/rmw_microxrcedds'...
+Cloning into 'src/micro-CDR'...
+Cloning into 'src/rcl'...
+Cloning into 'src/ament_cmake_ros'...
+Cloning into 'src/ament_index'...
+Cloning into 'src/rclc'...
+Cloning into 'src/rcutils'...
+--- stderr: gtest_vendor
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_TESTING
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: gmock_vendor
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_TESTING
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+Cloning into 'src/micro_ros_msgs'...
+--- stderr: ament_cmake_core
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+Cloning into 'src/rosidl_typesupport'...
+--- stderr: ament_cmake_python
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_libraries
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_export_definitions
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_include_directories
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_export_libraries
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_export_include_directories
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+Cloning into 'src/rosidl_typesupport_microxrcedds'...
+--- stderr: ament_cmake_export_link_flags
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_export_dependencies
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_test
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_target_dependencies
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_version
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_export_interfaces
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+Cloning into 'src/rosidl'...
+--- stderr: ament_cmake_export_targets
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_pytest
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_gtest
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_lint_auto
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_google_benchmark
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+Cloning into 'src/rmw'...
+--- stderr: ament_cmake_lint_cmake
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_gmock
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_nose
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_vendor_package
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_copyright
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+Cloning into 'src/rcl_interfaces'...
+--- stderr: ament_cmake
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_xmllint
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_cpplint
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_flake8
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_cppcheck
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_clang_format
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_pep257
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_uncrustify
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_auto
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+Cloning into 'src/rosidl_defaults'...
+--- stderr: ament_cmake_clang_tidy
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_mypy
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_pclint
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_pycodestyle
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_pyflakes
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_lint_common
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+--- stderr: ament_cmake_ros
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+    CMAKE_C_COMPILER
+
+
+---
+Cloning into 'src/unique_identifier_msgs'...
+Cloning into 'src/common_interfaces'...
+Cloning into 'src/example_interfaces'...
+Cloning into 'src/test_interface_files'...
+Cloning into 'src/rmw_implementation'...
+Cloning into 'src/rcl_logging'...
+Cloning into 'src/ros2_tracing'...
+warning: redirecting to https://gitlab.com/ros-tracing/ros2_tracing.git/
+Cloning into 'src/micro_ros_utilities'...
+touch: cannot touch 'src/rcl_logging/rcl_logging_log4cxx/COLCON_IGNORE': No such file or directory
+--- stderr: rcutils
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/include/rcutils/error_handling.h:28,
+                 from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/char_array.c:16:
+/home/smr/esp/esp-idf/components/newlib/platform_include/assert.h:16:2: warning: #include_next is a GCC extension
+   16 | #include_next <assert.h>
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/env.c:20:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/include/rcutils/error_handling.h:28,
+                 from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/error_handling.c:22:
+/home/smr/esp/esp-idf/components/newlib/platform_include/assert.h:16:2: warning: #include_next is a GCC extension
+   16 | #include_next <assert.h>
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/filesystem.c:21:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/error_handling.c:35:
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/./error_handling_helpers.h: In function '__rcutils_convert_uint64_t_into_c_str':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/./error_handling_helpers.h:109:48: warning: unused parameter 'number' [-Wunused-parameter]
+  109 | __rcutils_convert_uint64_t_into_c_str(uint64_t number, char * buffer, size_t buffer_size)
+      |                                       ~~~~~~~~~^~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/./error_handling_helpers.h:109:63: warning: unused parameter 'buffer' [-Wunused-parameter]
+  109 | __rcutils_convert_uint64_t_into_c_str(uint64_t number, char * buffer, size_t buffer_size)
+      |                                                        ~~~~~~~^~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/./error_handling_helpers.h:109:78: warning: unused parameter 'buffer_size' [-Wunused-parameter]
+  109 | __rcutils_convert_uint64_t_into_c_str(uint64_t number, char * buffer, size_t buffer_size)
+      |                                                                       ~~~~~~~^~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/./error_handling_helpers.h: In function '__rcutils_format_error_string':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/./error_handling_helpers.h:142:28: warning: unused parameter 'error_string' [-Wunused-parameter]
+  142 |   rcutils_error_string_t * error_string,
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/./error_handling_helpers.h:143:33: warning: unused parameter 'error_state' [-Wunused-parameter]
+  143 |   const rcutils_error_state_t * error_state)
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/error_handling.c: In function 'rcutils_get_error_string':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/error_handling.c:240:38: warning: initializer-string for array of 'char' is too long
+  240 |     return (rcutils_error_string_t) {"error not set"};  // NOLINT(readability/braces)
+      |                                      ^~~~~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/error_handling.c:240:38: note: (near initialization for '(anonymous).str')
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/./error_handling_helpers.h: At top level:
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/./error_handling_helpers.h:109:1: warning: '__rcutils_convert_uint64_t_into_c_str' defined but not used [-Wunused-function]
+  109 | __rcutils_convert_uint64_t_into_c_str(uint64_t number, char * buffer, size_t buffer_size)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/./error_handling_helpers.h:91:1: warning: '__rcutils_reverse_str' defined but not used [-Wunused-function]
+   91 | __rcutils_reverse_str(char * string_in, size_t string_len)
+      | ^~~~~~~~~~~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/process.c:20:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/logging.c:21:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/strcasecmp.c:20:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/snprintf.c:22:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/logging.c: In function 'rcutils_get_env_var_zero_or_one':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/logging.c:130:35: warning: unused parameter 'zero_semantic' [-Wunused-parameter]
+  130 |   const char * name, const char * zero_semantic,
+      |                      ~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/logging.c:131:16: warning: unused parameter 'one_semantic' [-Wunused-parameter]
+  131 |   const char * one_semantic)
+      |   ~~~~~~~~~~~~~^~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/strerror.c:20:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/atomic_64bits.c:53:10: warning: conflicting types for built-in function '__atomic_load_8'; expected 'long long unsigned int(const volatile void *, int)' [-Wbuiltin-declaration-mismatch]
+   53 | uint64_t __atomic_load_8(uint64_t *mem, int model) {
+      |          ^~~~~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/atomic_64bits.c:62:6: warning: conflicting types for built-in function '__atomic_store_8'; expected 'void(volatile void *, long long unsigned int,  int)' [-Wbuiltin-declaration-mismatch]
+   62 | void __atomic_store_8(uint64_t *mem, uint64_t val, int model) {
+      |      ^~~~~~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/atomic_64bits.c:70:10: warning: conflicting types for built-in function '__atomic_exchange_8'; expected 'long long unsigned int(volatile void *, long long unsigned int,  int)' [-Wbuiltin-declaration-mismatch]
+   70 | uint64_t __atomic_exchange_8(uint64_t *mem, uint64_t val, int model) {
+      |          ^~~~~~~~~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/atomic_64bits.c:80:10: warning: conflicting types for built-in function '__atomic_fetch_add_8'; expected 'long long unsigned int(volatile void *, long long unsigned int,  int)' [-Wbuiltin-declaration-mismatch]
+   80 | uint64_t __atomic_fetch_add_8(uint64_t *mem, uint64_t val, int model) {
+      |          ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/include/rcutils/error_handling.h:28,
+                 from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/uint8_array.c:15:
+/home/smr/esp/esp-idf/components/newlib/platform_include/assert.h:16:2: warning: #include_next is a GCC extension
+   16 | #include_next <assert.h>
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcutils/src/time_unix.c:40:
+/home/smr/esp/esp-idf/components/newlib/platform_include/time.h:11:2: warning: #include_next is a GCC extension
+   11 | #include_next <time.h>
+      |  ^~~~~~~~~~~~
+---
+--- stderr: microxrcedds_client
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/Micro-XRCE-DDS-Client/src/c/util/time.c:3:
+/home/smr/esp/esp-idf/components/newlib/platform_include/time.h:11:2: warning: #include_next is a GCC extension
+   11 | #include_next <time.h>
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/esp-idf/components/lwip/port/esp32xx/include/sys/socket.h:15,
+                 from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5:
+/home/smr/esp/esp-idf/components/lwip/include/lwip/sockets.h:8:2: warning: #include_next is a GCC extension
+    8 | #include_next "lwip/sockets.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/esp-idf/components/lwip/port/esp32xx/include/sys/socket.h:15,
+                 from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/Micro-XRCE-DDS-Client/src/c/profile/discovery/transport/udp_transport_datagram_posix_nopoll.c:4:
+/home/smr/esp/esp-idf/components/lwip/include/lwip/sockets.h:8:2: warning: #include_next is a GCC extension
+    8 | #include_next "lwip/sockets.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:74,
+                 from /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:59,
+                 from /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:71,
+                 from /home/smr/esp/esp-idf/components/esp_system/include/esp_task.h:24,
+                 from /home/smr/esp/esp-idf/components/lwip/port/include/lwipopts.h:20,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42,
+                 from /home/smr/esp/esp-idf/components/lwip/include/lwip/sockets.h:8:
+/home/smr/esp/esp-idf/components/esp_hw_support/include/spinlock.h: In function 'spinlock_acquire':
+/home/smr/esp/esp-idf/components/esp_hw_support/include/spinlock.h:117:94: warning: comparison of integer expressions of different signedness: 'esp_cpu_cycle_count_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]
+  117 |     } while ((timeout == SPINLOCK_WAIT_FOREVER) || (esp_cpu_get_cycle_count() - start_count) <= timeout);
+      |                                                                                              ^~
+In file included from /home/smr/esp/esp-idf/components/lwip/port/esp32xx/include/arch/cc.h:12,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:40,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:52:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h: At top level:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:74,
+                 from /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:59,
+                 from /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:71,
+                 from /home/smr/esp/esp-idf/components/esp_system/include/esp_task.h:24,
+                 from /home/smr/esp/esp-idf/components/lwip/port/include/lwipopts.h:20,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/inet.h:43,
+                 from /home/smr/esp/esp-idf/components/lwip/port/include/arpa/inet.h:10,
+                 from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18:
+/home/smr/esp/esp-idf/components/esp_hw_support/include/spinlock.h: In function 'spinlock_acquire':
+/home/smr/esp/esp-idf/components/esp_hw_support/include/spinlock.h:117:94: warning: comparison of integer expressions of different signedness: 'esp_cpu_cycle_count_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]
+  117 |     } while ((timeout == SPINLOCK_WAIT_FOREVER) || (esp_cpu_get_cycle_count() - start_count) <= timeout);
+      |                                                                                              ^~
+In file included from /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:74,
+                 from /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:59,
+                 from /home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:71,
+                 from /home/smr/esp/esp-idf/components/esp_system/include/esp_task.h:24,
+                 from /home/smr/esp/esp-idf/components/lwip/port/include/lwipopts.h:20,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42,
+                 from /home/smr/esp/esp-idf/components/lwip/include/lwip/sockets.h:8:
+/home/smr/esp/esp-idf/components/esp_hw_support/include/spinlock.h: In function 'spinlock_acquire':
+/home/smr/esp/esp-idf/components/esp_hw_support/include/spinlock.h:117:94: warning: comparison of integer expressions of different signedness: 'esp_cpu_cycle_count_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]
+  117 |     } while ((timeout == SPINLOCK_WAIT_FOREVER) || (esp_cpu_get_cycle_count() - start_count) <= timeout);
+      |                                                                                              ^~
+In file included from /home/smr/esp/esp-idf/components/lwip/port/esp32xx/include/arch/cc.h:12,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:40,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:52:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h: At top level:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/esp-idf/components/lwip/port/esp32xx/include/sys/socket.h:15,
+                 from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:20:
+/home/smr/esp/esp-idf/components/lwip/include/lwip/sockets.h:8:2: warning: #include_next is a GCC extension
+    8 | #include_next "lwip/sockets.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/esp-idf/components/lwip/port/esp32xx/include/arch/cc.h:12,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:40,
+                 from /home/smr/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:52:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h: At top level:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:6:
+/home/smr/esp/esp-idf/components/newlib/platform_include/sys/time.h:21:2: warning: #include_next is a GCC extension
+   21 | #include_next <sys/time.h>
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/esp-idf/components/lwip/port/include/netdb.h:14,
+                 from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/Micro-XRCE-DDS-Client/src/c/profile/discovery/transport/udp_transport_datagram_posix_nopoll.c:5:
+/home/smr/esp/esp-idf/components/lwip/include/lwip/netdb.h:9:2: warning: #include_next is a GCC extension
+    9 | #include_next "lwip/netdb.h"
+      |  ^~~~~~~~~~~~
+In file included from /home/smr/esp/esp-idf/components/lwip/port/include/netdb.h:14,
+                 from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:7:
+/home/smr/esp/esp-idf/components/lwip/include/lwip/netdb.h:9:2: warning: #include_next is a GCC extension
+    9 | #include_next "lwip/netdb.h"
+      |  ^~~~~~~~~~~~
+---
+--- stderr: rosidl_runtime_c
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  CMakeLists.txt:15 (find_package)
+
+
+---
+--- stderr: rcl_logging_interface
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  CMakeLists.txt:19 (find_package)
+
+
+---
+--- stderr: rcl_logging_noop
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl_logging_interface/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl_logging_interface/cmake/rcl_logging_interfaceConfig.cmake:41 (include)
+  CMakeLists.txt:15 (find_package)
+
+
+---
+--- stderr: rmw
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  CMakeLists.txt:21 (find_package)
+
+
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rmw/rmw/src/validate_full_topic_name.c:17:
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rmw/rmw/src/validate_full_topic_name.c: In function 'rmw_validate_full_topic_name_with_size':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rmw/rmw/src/validate_full_topic_name.c:106:29: warning: array subscript has type 'char' [-Wchar-subscripts]
+  106 |       if (isdigit(topic_name[i + 1]) != 0) {
+      |                   ~~~~~~~~~~^~~~~~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rmw/rmw/src/validate_node_name.c:17:
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rmw/rmw/src/validate_node_name.c: In function 'rmw_validate_node_name_with_size':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rmw/rmw/src/validate_node_name.c:72:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+   72 |   if (isdigit(node_name[0]) != 0) {
+      |               ~~~~~~~~~^~~
+---
+--- stderr: rosidl_typesupport_microxrcedds_c
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  CMakeLists.txt:22 (find_package)
+
+
+---
+--- stderr: rosidl_typesupport_c
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  CMakeLists.txt:33 (find_package)
+
+
+---
+--- stderr: micro_ros_utilities
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  CMakeLists.txt:18 (find_package)
+
+
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/micro_ros_utilities/src/type_utilities.c: In function 'print_type_info':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/micro_ros_utilities/src/type_utilities.c:96:61: warning: format '%u' expects argument of type 'unsigned int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   96 |       buffer, sizeof(buffer), "%sIntrospection for %s/%s - %u members, %zu B\n",
+      |                                                            ~^
+      |                                                             |
+      |                                                             unsigned int
+      |                                                            %lu
+......
+  100 |       members->member_count_,
+      |       ~~~~~~~~~~~~~~~~~~~~~~                                 
+      |              |
+      |              uint32_t {aka long unsigned int}
+---
+--- stderr: builtin_interfaces
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: unique_identifier_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:15 (find_package)
+
+
+---
+--- stderr: micro_ros_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:20 (find_package)
+
+
+---
+--- stderr: std_srvs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: lifecycle_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: rmw_microxrcedds
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  CMakeLists.txt:27 (find_package)
+
+
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rmw_microxrcedds/rmw_microxrcedds_c/src/rmw_init.c:15:
+/home/smr/esp/esp-idf/components/newlib/platform_include/time.h:11:2: warning: #include_next is a GCC extension
+   11 | #include_next <time.h>
+      |  ^~~~~~~~~~~~
+---
+--- stderr: rosgraph_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: statistics_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:15 (find_package)
+
+
+---
+--- stderr: action_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: rmw_implementation
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rmw_microxrcedds/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rmw_microxrcedds/cmake/rmw_microxrceddsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rmw_implementation_cmake/cmake/get_default_rmw_implementation.cmake:64 (find_package)
+  CMakeLists.txt:22 (get_default_rmw_implementation)
+
+
+---
+--- stderr: rcl_interfaces
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: std_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: composition_interfaces
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: actionlib_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: example_interfaces
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: test_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:19 (find_package)
+
+
+---
+--- stderr: geometry_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: rcl
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl_interfaces/cmake/rcl_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:10 (find_package)
+
+
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/domain_id.c:17:
+/home/smr/esp/esp-idf/components/newlib/platform_include/errno.h:10:2: warning: #include_next is a GCC extension
+   10 | #include_next "errno.h"
+      |  ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/init_options.c: In function 'rcl_init_options_copy':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/init_options.c:108:24: warning: unused variable 'error_string' [-Wunused-variable]
+  108 |     rmw_error_string_t error_string = rmw_get_error_string();
+      |                        ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/graph.c: In function '__validate_node_name_and_namespace':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/graph.c:56:18: warning: unused variable 'msg' [-Wunused-variable]
+   56 |     const char * msg = rmw_namespace_validation_result_string(validation_result);
+      |                  ^~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/graph.c:68:18: warning: unused variable 'msg' [-Wunused-variable]
+   68 |     const char * msg = rmw_node_name_validation_result_string(validation_result);
+      |                  ^~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/graph.c: In function '_rcl_wait_for_entities':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/graph.c:524:28: warning: unused variable 'error' [-Wunused-variable]
+  524 |     rcutils_error_string_t error = rcutils_get_error_string();
+      |                            ^~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/graph.c:558:32: warning: unused variable 'error' [-Wunused-variable]
+  558 |         rcutils_error_string_t error = rcutils_get_error_string();
+      |                                ^~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/graph.c: In function '__rcl_get_info_by_topic':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/graph.c:657:22: warning: variable 'error_string' set but not used [-Wunused-but-set-variable]
+  657 |   rmw_error_string_t error_string;
+      |                      ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/network_flow_endpoints.c: In function '__validate_network_flow_endpoint_array':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/network_flow_endpoints.c:43:22: warning: variable 'error_string' set but not used [-Wunused-but-set-variable]
+   43 |   rmw_error_string_t error_string;
+      |                      ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/network_flow_endpoints.c: In function 'rcl_publisher_get_network_flow_endpoints':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/network_flow_endpoints.c:75:22: warning: variable 'error_string' set but not used [-Wunused-but-set-variable]
+   75 |   rmw_error_string_t error_string;
+      |                      ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/network_flow_endpoints.c: In function 'rcl_subscription_get_network_flow_endpoints':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/network_flow_endpoints.c:106:22: warning: variable 'error_string' set but not used [-Wunused-but-set-variable]
+  106 |   rmw_error_string_t error_string;
+      |                      ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/node_resolve_name.c: In function 'rcl_resolve_name':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/node_resolve_name.c:49:28: warning: unused variable 'error' [-Wunused-variable]
+   49 |     rcutils_error_string_t error = rcutils_get_error_string();
+      |                            ^~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/node_resolve_name.c:97:18: warning: unused variable 'error' [-Wunused-variable]
+   97 |     const char * error = rmw_get_error_string().str;
+      |                  ^~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/node_resolve_name.c:114:28: warning: unused variable 'error' [-Wunused-variable]
+  114 |     rcutils_error_string_t error = rcutils_get_error_string();
+      |                            ^~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/node_resolve_name.c:33:27: warning: unused parameter 'local_args' [-Wunused-parameter]
+   33 |   const rcl_arguments_t * local_args,
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/node_resolve_name.c:34:27: warning: unused parameter 'global_args' [-Wunused-parameter]
+   34 |   const rcl_arguments_t * global_args,
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/node_resolve_name.c:40:8: warning: unused parameter 'only_expand' [-Wunused-parameter]
+   40 |   bool only_expand,
+      |        ^
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/node.c: In function 'rcl_node_init':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/node.c:166:18: warning: unused variable 'msg' [-Wunused-variable]
+  166 |     const char * msg = rmw_node_name_validation_result_string(validation_result);
+      |                  ^~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/node.c:198:18: warning: unused variable 'msg' [-Wunused-variable]
+  198 |     const char * msg = rmw_namespace_validation_result_string(validation_result);
+      |                  ^~~
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/validate_topic_name.c:22:
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/validate_topic_name.c: In function 'rcl_validate_topic_name_with_size':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/validate_topic_name.c:58:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+   58 |   if (isdigit(topic_name[0]) != 0) {
+      |               ~~~~~~~~~~^~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/validate_topic_name.c:84:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+   84 |         isdigit(topic_name[i]) != 0 &&
+      |                 ~~~~~~~~~~^~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/validate_topic_name.c:179:29: warning: array subscript has type 'char' [-Wchar-subscripts]
+  179 |       if (isdigit(topic_name[i + 1]) != 0) {
+      |                   ~~~~~~~~~~^~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/rmw_implementation_identifier_check.c: In function 'rcl_rmw_implementation_identifier_check':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl/src/rcl/rmw_implementation_identifier_check.c:136:34: warning: unused variable 'rmw_error_msg' [-Wunused-variable]
+  136 |     const rcutils_error_string_t rmw_error_msg = rcl_get_error_string();
+      |                                  ^~~~~~~~~~~~~
+---
+--- stderr: rcl_lifecycle
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/lifecycle_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/lifecycle_msgs/cmake/lifecycle_msgsConfig.cmake:41 (include)
+  CMakeLists.txt:7 (find_package)
+
+
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl_lifecycle/src/rcl_lifecycle.c: In function 'rcl_lifecycle_state_machine_fini':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl_lifecycle/src/rcl_lifecycle.c:265:24: warning: unused variable 'error_string' [-Wunused-variable]
+  265 |     rcl_error_string_t error_string = rcl_get_error_string();
+      |                        ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl_lifecycle/src/rcl_lifecycle.c:275:24: warning: unused variable 'error_string' [-Wunused-variable]
+  275 |     rcl_error_string_t error_string = rcl_get_error_string();
+      |                        ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl_lifecycle/src/rcl_lifecycle.c: In function '_trigger_transition':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl_lifecycle/src/rcl_lifecycle.c:366:26: warning: unused variable 'error_string' [-Wunused-variable]
+  366 |       rcl_error_string_t error_string = rcl_get_error_string();
+      |                          ^~~~~~~~~~~~
+---
+--- stderr: rcl_action
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/action_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/action_msgs/cmake/action_msgsConfig.cmake:41 (include)
+  CMakeLists.txt:7 (find_package)
+
+
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rcl/rcl_action/src/rcl_action/graph.c:20:
+/home/smr/esp/esp-idf/components/newlib/platform_include/assert.h:16:2: warning: #include_next is a GCC extension
+   16 | #include_next <assert.h>
+      |  ^~~~~~~~~~~~
+---
+--- stderr: diagnostic_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: shape_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/std_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/std_msgs/cmake/std_msgsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/geometry_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/geometry_msgs/cmake/geometry_msgsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: trajectory_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: rclc
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl_interfaces/cmake/rcl_interfacesConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl/cmake/rclConfig.cmake:41 (include)
+  CMakeLists.txt:31 (find_package)
+
+
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rclc/rclc/src/rclc/action_client.c:16:
+/home/smr/esp/esp-idf/components/newlib/platform_include/time.h:11:2: warning: #include_next is a GCC extension
+   11 | #include_next <time.h>
+      |  ^~~~~~~~~~~~
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rclc/rclc/src/rclc/executor_handle.c: In function 'rclc_executor_handle_print':
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rclc/rclc/src/rclc/executor_handle.c:84:10: warning: variable 'typeName' set but not used [-Wunused-but-set-variable]
+   84 |   char * typeName;
+      |          ^~~~~~~~
+---
+--- stderr: nav_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: rclc_lifecycle
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/std_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/std_msgs/cmake/std_msgsConfig.cmake:41 (include)
+  CMakeLists.txt:15 (find_package)
+
+
+---
+--- stderr: rclc_parameter
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl_interfaces/cmake/rcl_interfacesConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcl/cmake/rclConfig.cmake:41 (include)
+  CMakeLists.txt:34 (find_package)
+
+
+In file included from /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/src/rclc/rclc_parameter/src/rclc_parameter/parameter_server.c:20:
+/home/smr/esp/esp-idf/components/newlib/platform_include/time.h:11:2: warning: #include_next is a GCC extension
+   11 | #include_next <time.h>
+      |  ^~~~~~~~~~~~
+---
+--- stderr: sensor_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: stereo_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---
+--- stderr: visualization_msgs
+CMake Warning at /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/ament_cmake_export_libraries-extras.cmake:116 (message):
+  Package 'rcutils' exports library 'dl' which couldn't be found
+Call Stack (most recent call first):
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rcutils/cmake/rcutilsConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake:41 (include)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+
+---

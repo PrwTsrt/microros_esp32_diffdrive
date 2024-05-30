@@ -79,6 +79,7 @@ static void Motor_Task(void *arg)
 {
     ESP_LOGI(TAG, "Start Motor_Task with core:%d", xPortGetCoreID());
     pid_runtime_param.kp = 2.61;
+    // pid_runtime_param.kp = 5;
     pid_runtime_param.ki = 0.8568;
     pid_runtime_param.kd = 0;
     pid_runtime_param.cal_type = PID_CAL_TYPE_INCREMENTAL;

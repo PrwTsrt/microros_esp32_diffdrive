@@ -1,0 +1,113 @@
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+Processing 3 dependencies:
+[1/3] espressif/bdc_motor (0.1.0)
+[2/3] espressif/pid_ctrl (0.1.1)
+[3/3] idf (5.1.2)
+-- Project sdkconfig file /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/sdkconfig
+-- App "main" version: 6482a3d-dirty
+-- Adding linker script /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Using Micro XRCE-DDS middleware
+mkdir -p /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/libmicroros; cd /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/libmicroros; \
+for file in $(find /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/lib/ -name '*.a'); do \
+	folder=$(echo $file | sed -E "s/(.+)\/(.+).a/\2/"); \
+	mkdir -p $folder; cd $folder; /home/smr/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-ar x $file; \
+	for f in *; do \
+		mv $f ../$folder-$f; \
+	done; \
+	cd ..; rm -rf $folder; \
+done ; \
+/home/smr/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-ar rc -s libmicroros.a *.obj; cp libmicroros.a /home/smr/esp/Samples/extra_components/micro_ros_espidf_component; \
+cd ..; rm -rf libmicroros; \
+cp -R /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/include /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/include;
+-- Components: app_trace app_update bootloader bootloader_support bt car_motion cmock console cxx driver efuse encoder esp-tls esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__bdc_motor espressif__pid_ctrl esptool_py fatfs freertos hal heap http_parser i2c_master icm42670p idf_test ieee802154 inv_imu json log lwip main mbedtls micro_ros_espidf_component motor mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread pwm_motor sdmmc soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/smr/esp/esp-idf/components/app_trace /home/smr/esp/esp-idf/components/app_update /home/smr/esp/esp-idf/components/bootloader /home/smr/esp/esp-idf/components/bootloader_support /home/smr/esp/esp-idf/components/bt /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/car_motion /home/smr/esp/esp-idf/components/cmock /home/smr/esp/esp-idf/components/console /home/smr/esp/esp-idf/components/cxx /home/smr/esp/esp-idf/components/driver /home/smr/esp/esp-idf/components/efuse /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/encoder /home/smr/esp/esp-idf/components/esp-tls /home/smr/esp/esp-idf/components/esp_adc /home/smr/esp/esp-idf/components/esp_app_format /home/smr/esp/esp-idf/components/esp_coex /home/smr/esp/esp-idf/components/esp_common /home/smr/esp/esp-idf/components/esp_eth /home/smr/esp/esp-idf/components/esp_event /home/smr/esp/esp-idf/components/esp_gdbstub /home/smr/esp/esp-idf/components/esp_hid /home/smr/esp/esp-idf/components/esp_http_client /home/smr/esp/esp-idf/components/esp_http_server /home/smr/esp/esp-idf/components/esp_https_ota /home/smr/esp/esp-idf/components/esp_https_server /home/smr/esp/esp-idf/components/esp_hw_support /home/smr/esp/esp-idf/components/esp_lcd /home/smr/esp/esp-idf/components/esp_local_ctrl /home/smr/esp/esp-idf/components/esp_mm /home/smr/esp/esp-idf/components/esp_netif /home/smr/esp/esp-idf/components/esp_netif_stack /home/smr/esp/esp-idf/components/esp_partition /home/smr/esp/esp-idf/components/esp_phy /home/smr/esp/esp-idf/components/esp_pm /home/smr/esp/esp-idf/components/esp_psram /home/smr/esp/esp-idf/components/esp_ringbuf /home/smr/esp/esp-idf/components/esp_rom /home/smr/esp/esp-idf/components/esp_system /home/smr/esp/esp-idf/components/esp_timer /home/smr/esp/esp-idf/components/esp_wifi /home/smr/esp/esp-idf/components/espcoredump /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/managed_components/espressif__bdc_motor /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/managed_components/espressif__pid_ctrl /home/smr/esp/esp-idf/components/esptool_py /home/smr/esp/esp-idf/components/fatfs /home/smr/esp/esp-idf/components/freertos /home/smr/esp/esp-idf/components/hal /home/smr/esp/esp-idf/components/heap /home/smr/esp/esp-idf/components/http_parser /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/i2c_master /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/icm42670p /home/smr/esp/esp-idf/components/idf_test /home/smr/esp/esp-idf/components/ieee802154 /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/inv_imu /home/smr/esp/esp-idf/components/json /home/smr/esp/esp-idf/components/log /home/smr/esp/esp-idf/components/lwip /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main /home/smr/esp/esp-idf/components/mbedtls /home/smr/esp/Samples/extra_components/micro_ros_espidf_component /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/motor /home/smr/esp/esp-idf/components/mqtt /home/smr/esp/esp-idf/components/newlib /home/smr/esp/esp-idf/components/nvs_flash /home/smr/esp/esp-idf/components/openthread /home/smr/esp/esp-idf/components/partition_table /home/smr/esp/esp-idf/components/perfmon /home/smr/esp/esp-idf/components/protobuf-c /home/smr/esp/esp-idf/components/protocomm /home/smr/esp/esp-idf/components/pthread /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/pwm_motor /home/smr/esp/esp-idf/components/sdmmc /home/smr/esp/esp-idf/components/soc /home/smr/esp/esp-idf/components/spi_flash /home/smr/esp/esp-idf/components/spiffs /home/smr/esp/esp-idf/components/tcp_transport /home/smr/esp/esp-idf/components/touch_element /home/smr/esp/esp-idf/components/ulp /home/smr/esp/esp-idf/components/unity /home/smr/esp/esp-idf/components/usb /home/smr/esp/esp-idf/components/vfs /home/smr/esp/esp-idf/components/wear_levelling /home/smr/esp/esp-idf/components/wifi_provisioning /home/smr/esp/esp-idf/components/wpa_supplicant /home/smr/esp/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build
+[0/2] Re-checking globbed directories...
+[1/8] Performing build step for 'bootloader'
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+-- Project sdkconfig file /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/sdkconfig
+Compiler supported targets: xtensa-esp32s3-elf
+
+-- Adding linker script /home/smr/esp/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- App "bootloader" version: v5.1.2
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/bootloader/subproject/main/ld/esp32s3/bootloader.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/bootloader/subproject/main/ld/esp32s3/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_common esp_hw_support esp_rom esp_system esptool_py freertos hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: /home/smr/esp/esp-idf/components/bootloader /home/smr/esp/esp-idf/components/bootloader_support /home/smr/esp/esp-idf/components/efuse /home/smr/esp/esp-idf/components/esp_app_format /home/smr/esp/esp-idf/components/esp_common /home/smr/esp/esp-idf/components/esp_hw_support /home/smr/esp/esp-idf/components/esp_rom /home/smr/esp/esp-idf/components/esp_system /home/smr/esp/esp-idf/components/esptool_py /home/smr/esp/esp-idf/components/freertos /home/smr/esp/esp-idf/components/hal /home/smr/esp/esp-idf/components/log /home/smr/esp/esp-idf/components/bootloader/subproject/main /home/smr/esp/esp-idf/components/bootloader/subproject/components/micro-ecc /home/smr/esp/esp-idf/components/newlib /home/smr/esp/esp-idf/components/partition_table /home/smr/esp/esp-idf/components/soc /home/smr/esp/esp-idf/components/spi_flash /home/smr/esp/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader
+[1/1] cd /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader/esp-idf/esptool_py && /home/smr/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/smr/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader/bootloader.bin
+Bootloader binary size 0x51a0 bytes. 0x2e60 bytes (36%) free.
+[2/6] Generating ld/sections.ld
+[3/6] Linking CXX executable main.elf
+[4/6] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/main.bin
+[5/6] cd /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/esp-idf/esptool_py && /home/smr/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/smr/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/partition_table/partition-table.bin /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/main.bin
+main.bin binary size 0x5bd30 bytes. Smallest app partition is 0x177000 bytes. 0x11b2d0 bytes (76%) free.
+[5/6] cd /home/smr/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/smr/esp/esp-idf -D "SERIAL_TOOL=/home/smr/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/home/smr/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build -P /home/smr/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyUSB1 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB1
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 2MB (AP_3v3)
+Crystal is 40MHz
+MAC: 74:4d:bd:93:a9:c8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0006bfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20896 bytes to 13254...
+Writing at 0x00000000... (100 %)
+Wrote 20896 bytes (13254 compressed) at 0x00000000 in 0.8 seconds (effective 221.6 kbit/s)...
+Hash of data verified.
+Compressed 376112 bytes to 207407...
+Writing at 0x00010000... (7 %)
+Writing at 0x0001cc98... (15 %)
+Writing at 0x00024325... (23 %)
+Writing at 0x0002a660... (30 %)
+Writing at 0x000312c0... (38 %)
+Writing at 0x00036a9d... (46 %)
+Writing at 0x0003c7b9... (53 %)
+Writing at 0x00043171... (61 %)
+Writing at 0x0004908a... (69 %)
+Writing at 0x00051a65... (76 %)
+Writing at 0x0005b848... (84 %)
+Writing at 0x00061bef... (92 %)
+Writing at 0x00067901... (100 %)
+Wrote 376112 bytes (207407 compressed) at 0x00010000 in 5.0 seconds (effective 602.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 319.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

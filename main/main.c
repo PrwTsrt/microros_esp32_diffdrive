@@ -21,7 +21,7 @@
 #include <micro_ros_utilities/string_utilities.h>
 
 #include <geometry_msgs/msg/twist.h>
-#include <std_msgs/msg/int32.h>
+#include <std_msgs/msg/bool.h>
 #include <sensor_msgs/msg/imu.h>
 #include <nav_msgs/msg/odometry.h>
 
@@ -33,27 +33,32 @@
 #define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){printf("Failed status on line %d: %d. Aborting.\n",__LINE__,(int)temp_rc);vTaskDelete(NULL);}}
 #define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){printf("Failed status on line %d: %d. Continuing.\n",__LINE__,(int)temp_rc);}}
 
-
-
 #define ROS_NAMESPACE      CONFIG_MICRO_ROS_NAMESPACE
 #define ROS_DOMAIN_ID      CONFIG_MICRO_ROS_DOMAIN_ID
 #define ROS_AGENT_IP       CONFIG_MICRO_ROS_AGENT_IP
 #define ROS_AGENT_PORT     CONFIG_MICRO_ROS_AGENT_PORT
 
 
-
 static const char *TAG = "MAIN";
 
 
 rcl_subscription_t twist_subscriber;
+rcl_subscription_t bumper_state_subscriber;
 rcl_publisher_t publisher_imu;
 rcl_publisher_t publisher_odom;
 sensor_msgs__msg__Imu msg_imu;
 geometry_msgs__msg__Twist twist_msg;
 nav_msgs__msg__Odometry msg_odom;
+std_msgs__msg__Bool msg_bumper;
 
+rclc_executor_t executor;
+rclc_support_t support;
+rcl_allocator_t allocator;
+rcl_node_t node;
 rcl_timer_t timer_imu;
 rcl_timer_t timer_odom;
+
+rcl_init_options_t init_options;
 
 unsigned long long time_offset = 0;
 unsigned long prev_odom_update = 0;
@@ -63,6 +68,23 @@ float y_pos_ = 0.0;
 float heading_ = 0.0;
 
 car_motion_t car_motion;
+
+// Timeout for each ping attempt
+const int timeout_ms = 100;
+
+// Number of ping attempts
+const uint8_t attempts = 1;
+
+// Spin period
+const unsigned int spin_timeout = RCL_MS_TO_NS(100);
+
+// Enum with connection status
+enum states {
+    WAITING_AGENT,
+    AGENT_AVAILABLE,
+    AGENT_CONNECTED,
+    AGENT_DISCONNECTED
+}state ; 
 
 // Initializes the ROS topic information for odom
 void odom_ros_init(void)
@@ -88,6 +110,10 @@ void odom_ros_init(void)
     }
     msg_odom.header.frame_id = micro_ros_string_utilities_set(msg_odom.header.frame_id, frame_id);
     msg_odom.child_frame_id = micro_ros_string_utilities_set(msg_odom.child_frame_id, child_frame_id);
+
+    // msg_transform.header.frame_id = micro_ros_string_utilities_set(msg_transform.header.frame_id, frame_id);
+    // msg_transform.child_frame_id = micro_ros_string_utilities_set(msg_transform.child_frame_id, child_frame_id);
+
     free(frame_id);
     free(child_frame_id);
 }
@@ -132,11 +158,20 @@ void odom_update(float vel_dt, float linear_vel_x, float linear_vel_y, float ang
     msg_odom.pose.pose.position.y = y_pos_;
     msg_odom.pose.pose.position.z = 0.0;
 
+    // msg_transform.transform.translation.x = x_pos_;
+    // msg_transform.transform.translation.y = y_pos_;
+    // msg_transform.transform.translation.z = 0.0;
+
     // robot's heading in quaternion
     msg_odom.pose.pose.orientation.x = (double)q[1];
     msg_odom.pose.pose.orientation.y = (double)q[2];
     msg_odom.pose.pose.orientation.z = (double)q[3];
     msg_odom.pose.pose.orientation.w = (double)q[0];
+
+    // msg_transform.transform.rotation.x = (double)q[1];
+    // msg_transform.transform.rotation.y = (double)q[2];
+    // msg_transform.transform.rotation.z = (double)q[3];
+    // msg_transform.transform.rotation.w = (double)q[0];
 
     msg_odom.pose.covariance[0] = 0.001;
     msg_odom.pose.covariance[7] = 0.001;
@@ -155,6 +190,8 @@ void odom_update(float vel_dt, float linear_vel_x, float linear_vel_y, float ang
     msg_odom.twist.covariance[0] = 0.0001;
     msg_odom.twist.covariance[7] = 0.0001;
     msg_odom.twist.covariance[35] = 0.0001;
+
+
 }
 
 
@@ -264,7 +301,13 @@ void timer_odom_callback(rcl_timer_t *timer, int64_t last_call_time)
             car_motion.Wz);
         msg_odom.header.stamp.sec = time_stamp.tv_sec;
         msg_odom.header.stamp.nanosec = time_stamp.tv_nsec;
+
+        // msg_transform.header.stamp.sec = time_stamp.tv_sec;
+        // msg_transform.header.stamp.nanosec = time_stamp.tv_nsec;
+
         RCSOFTCHECK(rcl_publish(&publisher_odom, &msg_odom, NULL));
+        // RCSOFTCHECK(rcl_publish(&publisher_transform, &msg_transform, NULL));
+
     }
 }
 
@@ -284,21 +327,24 @@ void timer_imu_callback(rcl_timer_t *timer, int64_t last_call_time)
 void twist_Callback(const void *msgin)
 {
     ESP_LOGI(TAG, "cmd_vel:%.2f, %.2f, %.2f", twist_msg.linear.x, twist_msg.linear.y, twist_msg.angular.z);
-    Motion_Ctrl(twist_msg.linear.x, 0, twist_msg.angular.z);
+    msg_bumper.data ? Motion_Ctrl(0, 0, 0) : Motion_Ctrl(twist_msg.linear.x, 0, twist_msg.angular.z);
 }
 
-// micro ros processes tasks
-void micro_ros_task(void *arg)
-{
-    rcl_allocator_t allocator = rcl_get_default_allocator();
-    rclc_support_t support;
+bool create_entities(void) {
+
+    init_options = rcl_get_zero_initialized_init_options();
+    allocator = rcl_get_default_allocator();
+
+    RCCHECK(rcl_init_options_init(&init_options, allocator));
+
+    size_t domain_id = (size_t)(ROS_DOMAIN_ID);
+    RCCHECK(rcl_init_options_set_domain_id(&init_options, domain_id));
 
     // create init_options
-	RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
-    
-    // create ROS2 node
-    rcl_node_t node;
-    RCCHECK(rclc_node_init_default(&node, "base_controller", ROS_NAMESPACE, &support));
+    RCCHECK(rclc_support_init_with_options(&support, 0, NULL, &init_options, &allocator));
+
+    // create node
+    RCCHECK(rclc_node_init_default(&node, "micro_ros_esp32_node", "", &support));
 
     // create publisher_odom
     RCCHECK(rclc_publisher_init_default(
@@ -321,8 +367,15 @@ void micro_ros_task(void *arg)
         ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
         "cmd_vel"));
 
+    // Create subscriber bumper_state
+    RCCHECK(rclc_subscription_init_default(
+        &bumper_state_subscriber,
+        &node,
+        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Bool),
+        "bumper_state"));
+
     // create timer. Set the publish frequency to 20HZ
-    const unsigned int timer_timeout = 50;
+    const unsigned int timer_timeout = 25;
     RCCHECK(rclc_timer_init_default(
         &timer_imu,
         &support,
@@ -335,10 +388,10 @@ void micro_ros_task(void *arg)
         timer_odom_callback));
 
     // create executor. Three of the parameters are the number of actuators controlled that is greater than or equal to the number of subscribers and publishers added to the executor.
-    rclc_executor_t executor;
-    int handle_num = 3;
+    int handle_num = 4;
+    executor = rclc_executor_get_zero_initialized_executor();
     RCCHECK(rclc_executor_init(&executor, &support.context, handle_num, &allocator));
-    
+        
     // Adds the publishers's timer to the executor
     RCCHECK(rclc_executor_add_timer(&executor, &timer_imu));
     RCCHECK(rclc_executor_add_timer(&executor, &timer_odom));
@@ -350,23 +403,81 @@ void micro_ros_task(void *arg)
         &twist_msg,
         &twist_Callback,
         ON_NEW_DATA));
-    
+
+    RCCHECK(rclc_executor_add_subscription(
+        &executor,
+        &bumper_state_subscriber,
+        &msg_bumper,
+        &twist_Callback,
+        ON_NEW_DATA));
+        
     sync_time();
 
-    // Loop the microROS task
-    while (1)
-    {
-        rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
-        usleep(1000);
-    }
+    return true;
+}
+
+void destroy_entities(void) {
+
+    rmw_context_t * rmw_context = rcl_context_get_rmw_context(&support.context);
+    (void) rmw_uros_set_context_entity_destroy_session_timeout(rmw_context, 0);
 
     // free resources
     RCCHECK(rcl_subscription_fini(&twist_subscriber, &node));
+    RCCHECK(rcl_subscription_fini(&bumper_state_subscriber, &node));
     RCCHECK(rcl_publisher_fini(&publisher_odom, &node));
     RCCHECK(rcl_publisher_fini(&publisher_imu, &node));
     RCCHECK(rcl_node_fini(&node));
+    RCCHECK(rcl_timer_fini(&timer_imu));
+    RCCHECK(rcl_timer_fini(&timer_odom));
+    RCCHECK(rclc_executor_fini(&executor));
+    RCCHECK(rclc_support_fini(&support)); 
+    }
 
-    vTaskDelete(NULL);
+// micro ros processes tasks
+void micro_ros_task(void *arg)
+{
+    while (true)
+    {
+        switch (state)
+        {
+            case WAITING_AGENT:
+                // Check for agent connection
+                state = (RMW_RET_OK == rmw_uros_ping_agent(timeout_ms, attempts)) ? AGENT_AVAILABLE : WAITING_AGENT;
+                break;
+
+            case AGENT_AVAILABLE:
+                // Create micro-ROS entities
+                state = (true == create_entities()) ? AGENT_CONNECTED : WAITING_AGENT;
+
+                if (state == WAITING_AGENT)
+                {
+                    // Creation failed, release allocated resources
+                    destroy_entities();
+                };
+                break;
+
+            case AGENT_CONNECTED:
+                // Check connection and spin on success
+                state = (RMW_RET_OK == rmw_uros_ping_agent(timeout_ms, attempts)) ? AGENT_CONNECTED : AGENT_DISCONNECTED;
+                if (state == AGENT_CONNECTED)
+                {
+                    rclc_executor_spin_some(&executor, spin_timeout);
+                }
+                break;
+
+            case AGENT_DISCONNECTED:
+                // Connection is lost, destroy entities and go back to first step
+                destroy_entities();
+                state = WAITING_AGENT;
+                break;
+
+            default:
+                break;
+        }
+    }
+
+     vTaskDelete(NULL);
+
 }
 
 static size_t uart_port = UART_NUM_0;
@@ -374,9 +485,6 @@ static size_t uart_port = UART_NUM_0;
 void app_main(void)
 {
     Motor_Init();
-
-    // Initialize the network and connect the WiFi signal
-    // ESP_ERROR_CHECK(uros_network_interface_initialize());
 
 #if defined(RMW_UXRCE_TRANSPORT_CUSTOM)
 	rmw_uros_set_custom_transport(
@@ -397,13 +505,12 @@ void app_main(void)
     Icm42670p_Init();
     imu_ros_init();
 
-    // Start microROS tasks
-    xTaskCreate(micro_ros_task,
+    xTaskCreatePinnedToCore(micro_ros_task,
                 "micro_ros_task",
                 CONFIG_MICRO_ROS_APP_STACK,
                 NULL,
                 CONFIG_MICRO_ROS_APP_TASK_PRIO,
-                NULL);
+                NULL, 1);
 
     // Start IMU tasks
     xTaskCreatePinnedToCore(imu_update_data_task,
@@ -411,5 +518,5 @@ void app_main(void)
                 CONFIG_MICRO_ROS_APP_STACK,
                 NULL,
                 CONFIG_MICRO_ROS_APP_TASK_PRIO,
-                NULL, 1);
+                NULL, 0);
 }

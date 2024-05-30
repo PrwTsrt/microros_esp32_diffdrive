@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/CMakeFiles/bootloader
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/CMakeFiles/bootloader.rule
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/CMakeFiles/bootloader-complete.rule
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

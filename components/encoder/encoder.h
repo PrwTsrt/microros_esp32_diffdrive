@@ -6,11 +6,11 @@ extern "C" {
 
 #include "stdint.h"
 
-#define ENCODER_GPIO_H1A            6
-#define ENCODER_GPIO_H1B            7
+#define ENCODER_GPIO_H1A            47
+#define ENCODER_GPIO_H1B            48
 
-#define ENCODER_GPIO_H2A            48
-#define ENCODER_GPIO_H2B            47
+#define ENCODER_GPIO_H2A            7
+#define ENCODER_GPIO_H2B            6
 
 #define ENCODER_GPIO_H3A            11
 #define ENCODER_GPIO_H3B            12

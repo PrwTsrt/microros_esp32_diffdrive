@@ -1,0 +1,6 @@
+[0/2] Re-checking globbed directories...
+[1/4] cd /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/esp-idf/esptool_py && /home/smr/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/smr/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/partition_table/partition-table.bin /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/main.bin
+main.bin binary size 0x5ca00 bytes. Smallest app partition is 0x177000 bytes. 0x11a600 bytes (75%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader/esp-idf/esptool_py && /home/smr/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/smr/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/bootloader/bootloader.bin
+Bootloader binary size 0x51a0 bytes. 0x2e60 bytes (36%) free.
