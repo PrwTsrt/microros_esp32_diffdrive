@@ -327,7 +327,9 @@ void timer_imu_callback(rcl_timer_t *timer, int64_t last_call_time)
 void twist_Callback(const void *msgin)
 {
     ESP_LOGI(TAG, "cmd_vel:%.2f, %.2f, %.2f", twist_msg.linear.x, twist_msg.linear.y, twist_msg.angular.z);
-    msg_bumper.data ? Motion_Ctrl(0, 0, 0) : Motion_Ctrl(twist_msg.linear.x, 0, twist_msg.angular.z);
+    // msg_bumper.data ? Motion_Ctrl(0, 0, 0) : Motion_Ctrl(twist_msg.linear.x, 0, twist_msg.angular.z);
+    if((msg_bumper.data) && (twist_msg.linear.x > 0||twist_msg.angular.z != 0)){twist_msg.linear.x = 0; twist_msg.angular.z = 0;}
+    Motion_Ctrl(twist_msg.linear.x, 0, twist_msg.angular.z);
 }
 
 bool create_entities(void) {
@@ -461,7 +463,7 @@ void micro_ros_task(void *arg)
                 state = (RMW_RET_OK == rmw_uros_ping_agent(timeout_ms, attempts)) ? AGENT_CONNECTED : AGENT_DISCONNECTED;
                 if (state == AGENT_CONNECTED)
                 {
-                    rclc_executor_spin_some(&executor, spin_timeout);
+                    RCSOFTCHECK(rclc_executor_spin_some(&executor, spin_timeout));
                 }
                 break;
 
@@ -475,8 +477,6 @@ void micro_ros_task(void *arg)
                 break;
         }
     }
-
-     vTaskDelete(NULL);
 
 }
 
