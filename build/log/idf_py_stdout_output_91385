@@ -1,0 +1,392 @@
+-- Existing sdkconfig '/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/sdkconfig' renamed to '/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/sdkconfig.old'.
+-- Found Git: /usr/bin/git (found version "2.34.1") 
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/smr/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/smr/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/smr/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32s3
+Processing 3 dependencies:
+[1/3] espressif/bdc_motor (0.1.0)
+[2/3] espressif/pid_ctrl (0.1.1)
+[3/3] idf (5.1.2)
+-- Project sdkconfig file /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/sdkconfig
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of time_t
+-- Check size of time_t - done
+-- Found Python3: /home/smr/.espressif/python_env/idf5.1_py3.10_env/bin/python (found version "3.10.12") found components: Interpreter 
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- App "main" version: b30eaae-dirty
+-- Adding linker script /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /home/smr/esp/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Using Micro XRCE-DDS middleware
+rm -f /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/esp32_toolchain.cmake; \
+cat /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/esp32_toolchain.cmake.in | \
+	sed "s/@CMAKE_C_COMPILER@/\/home\/smr\/.espressif\/tools\/xtensa-esp32s3-elf\/esp-12.2.0_20230208\/xtensa-esp32s3-elf\/bin\/xtensa-esp32s3-elf-gcc/g" | \
+	sed "s/@CMAKE_CXX_COMPILER@/\/home\/smr\/.espressif\/tools\/xtensa-esp32s3-elf\/esp-12.2.0_20230208\/xtensa-esp32s3-elf\/bin\/xtensa-esp32s3-elf-g++/g" | \
+	sed "s/@CFLAGS@/-mlongcalls  -ffunction-sections -fdata-sections/g" | \
+	sed "s/@CXXFLAGS@/-mlongcalls  -ffunction-sections -fdata-sections/g" | \
+	sed "s/@IDF_TARGET@/esp32s3/g" | \
+	sed "s/@IDF_PATH@/\/home\/smr\/esp\/esp-idf/g" | \
+	sed "s/@BUILD_CONFIG_DIR@/\/home\/smr\/esp\/Samples\/extra_components\/micro_ros_espidf_component\/microros_esp32_diffdrive\/build\/config/g" \
+	> /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/esp32_toolchain.cmake
+rm -rf micro_ros_dev; \
+mkdir micro_ros_dev; cd micro_ros_dev; \
+git clone -b humble https://github.com/ament/ament_cmake src/ament_cmake; \
+git clone -b humble https://github.com/ament/ament_lint src/ament_lint; \
+git clone -b humble https://github.com/ament/ament_package src/ament_package; \
+git clone -b humble https://github.com/ament/googletest src/googletest; \
+git clone -b humble https://github.com/ros2/ament_cmake_ros src/ament_cmake_ros; \
+git clone -b humble https://github.com/ament/ament_index src/ament_index; \
+colcon build --cmake-args -DBUILD_TESTING=OFF -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=gcc;
+rm -rf micro_ros_src; \
+mkdir micro_ros_src; cd micro_ros_src; \
+if [ "microxrcedds" = "embeddedrtps" ]; then \
+	git clone -b humble https://github.com/micro-ROS/embeddedRTPS src/embeddedRTPS; \
+	git clone -b humble https://github.com/micro-ROS/rmw_embeddedrtps src/rmw_embeddedrtps; \
+else \
+	git clone -b ros2 https://github.com/eProsima/Micro-XRCE-DDS-Client src/Micro-XRCE-DDS-Client; \
+	git clone -b humble https://github.com/micro-ROS/rmw_microxrcedds src/rmw_microxrcedds; \
+fi; \
+git clone -b ros2 https://github.com/eProsima/micro-CDR src/micro-CDR; \
+git clone -b humble https://github.com/micro-ROS/rcl src/rcl; \
+git clone -b humble https://github.com/ros2/rclc src/rclc; \
+git clone -b humble https://github.com/micro-ROS/rcutils src/rcutils; \
+git clone -b humble https://github.com/micro-ROS/micro_ros_msgs src/micro_ros_msgs; \
+git clone -b humble https://github.com/micro-ROS/rosidl_typesupport src/rosidl_typesupport; \
+git clone -b humble https://github.com/micro-ROS/rosidl_typesupport_microxrcedds src/rosidl_typesupport_microxrcedds; \
+git clone -b humble https://github.com/ros2/rosidl src/rosidl; \
+git clone -b humble https://github.com/ros2/rmw src/rmw; \
+git clone -b humble https://github.com/ros2/rcl_interfaces src/rcl_interfaces; \
+git clone -b humble https://github.com/ros2/rosidl_defaults src/rosidl_defaults; \
+git clone -b humble https://github.com/ros2/unique_identifier_msgs src/unique_identifier_msgs; \
+git clone -b humble https://github.com/ros2/common_interfaces src/common_interfaces; \
+git clone -b galactic https://github.com/ros2/example_interfaces src/example_interfaces; \
+git clone -b humble https://github.com/ros2/test_interface_files src/test_interface_files; \
+git clone -b humble https://github.com/ros2/rmw_implementation src/rmw_implementation; \
+git clone -b humble https://github.com/ros2/rcl_logging src/rcl_logging; \
+git clone -b humble https://gitlab.com/ros-tracing/ros2_tracing src/ros2_tracing; \
+git clone -b humble https://github.com/micro-ROS/micro_ros_utilities src/micro_ros_utilities; \
+    touch src/rosidl/rosidl_typesupport_introspection_cpp/COLCON_IGNORE; \
+    touch src/rcl_logging/rcl_logging_log4cxx/COLCON_IGNORE; \
+    touch src/rcl_logging/rcl_logging_spdlog/COLCON_IGNORE; \
+    touch src/rclc/rclc_examples/COLCON_IGNORE; \
+touch src/rcl/rcl_yaml_param_parser/COLCON_IGNORE; \
+cp -rf /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/extra_packages src/extra_packages || :; \
+test -f src/extra_packages/extra_packages.repos && cd src/extra_packages && vcs import --input extra_packages.repos || :;
+Starting >>> ament_package
+Starting >>> ament_lint
+Starting >>> ament_pycodestyle
+Starting >>> gtest_vendor
+Starting >>> ament_cppcheck
+Finished <<< gtest_vendor [1.65s]
+Starting >>> gmock_vendor
+Finished <<< gmock_vendor [0.48s]
+Finished <<< ament_lint [2.57s]
+Starting >>> ament_flake8
+Finished <<< ament_cppcheck [2.60s]
+Finished <<< ament_pycodestyle [2.62s]
+Finished <<< ament_package [2.64s]
+Starting >>> ament_cmake_core
+Starting >>> ament_pyflakes
+Finished <<< ament_cmake_core [1.71s]
+Starting >>> ament_cmake_python
+Starting >>> ament_cmake_libraries
+Starting >>> ament_cmake_export_libraries
+Starting >>> ament_cmake_include_directories
+Starting >>> ament_cmake_export_definitions
+Starting >>> ament_cmake_export_include_directories
+Finished <<< ament_pyflakes [1.94s]
+Starting >>> ament_cmake_export_link_flags
+Finished <<< ament_flake8 [2.06s]
+Starting >>> ament_pep257
+Finished <<< ament_cmake_python [1.54s]
+Starting >>> ament_cmake_test
+Finished <<< ament_cmake_export_include_directories [1.65s]
+Starting >>> ament_cmake_version
+Finished <<< ament_cmake_include_directories [1.87s]
+Starting >>> ament_mypy
+Finished <<< ament_pep257 [2.10s]
+Starting >>> ament_copyright
+Finished <<< ament_cmake_export_libraries [2.94s]
+Starting >>> ament_cmake_export_interfaces
+Finished <<< ament_cmake_export_definitions [3.01s]
+Starting >>> ament_cmake_export_targets
+Finished <<< ament_cmake_export_link_flags [2.94s]
+Finished <<< ament_cmake_libraries [3.22s]
+Starting >>> ament_cmake_export_dependencies
+Starting >>> ament_cmake_target_dependencies
+Finished <<< ament_cmake_version [1.81s]
+Finished <<< ament_cmake_test [2.42s]
+Starting >>> ament_cmake_gtest
+Starting >>> ament_lint_auto
+Finished <<< ament_mypy [2.43s]
+Starting >>> ament_cmake_pytest
+Finished <<< ament_cmake_export_interfaces [1.65s]
+Starting >>> ament_cmake_nose
+Finished <<< ament_copyright [2.22s]
+Starting >>> ament_lint_cmake
+Finished <<< ament_lint_auto [1.73s]
+Starting >>> ament_cpplint
+Finished <<< ament_cmake_target_dependencies [2.53s]
+Starting >>> ament_uncrustify
+Finished <<< ament_cmake_export_targets [3.07s]
+Finished <<< ament_cmake_export_dependencies [2.91s]
+Starting >>> ament_xmllint
+Starting >>> ament_clang_format
+Finished <<< ament_lint_cmake [2.48s]
+Starting >>> ament_cmake_lint_cmake
+Finished <<< ament_cmake_pytest [2.92s]
+Starting >>> ament_clang_tidy
+Finished <<< ament_cmake_gtest [3.43s]
+Starting >>> ament_cmake_gen_version_h
+Finished <<< ament_cmake_nose [2.82s]
+Starting >>> ament_cmake_gmock
+Finished <<< ament_cpplint [2.22s]
+Starting >>> ament_pclint
+Finished <<< ament_uncrustify [2.82s]
+Starting >>> domain_coordinator
+Finished <<< ament_xmllint [3.16s]
+Starting >>> ament_cmake_google_benchmark
+Finished <<< ament_clang_format [3.19s]
+Starting >>> ament_cmake_vendor_package
+Finished <<< ament_clang_tidy [2.22s]
+Starting >>> ament_index_python
+Finished <<< ament_cmake_lint_cmake [2.38s]
+Starting >>> ament_cmake_copyright
+Finished <<< ament_pclint [2.23s]
+Finished <<< ament_cmake_gmock [3.05s]
+Finished <<< domain_coordinator [2.38s]
+Finished <<< ament_cmake_vendor_package [1.77s]
+Finished <<< ament_cmake_gen_version_h [3.86s]
+Starting >>> ament_cmake
+Finished <<< ament_index_python [2.01s]
+Finished <<< ament_cmake_copyright [2.14s]
+Starting >>> ament_cmake_cppcheck
+Starting >>> ament_cmake_cpplint
+Starting >>> ament_cmake_flake8
+Starting >>> ament_cmake_pep257
+Starting >>> ament_cmake_uncrustify
+Starting >>> ament_cmake_xmllint
+Finished <<< ament_cmake_google_benchmark [2.52s]
+Starting >>> ament_cmake_clang_format
+Finished <<< ament_cmake [1.99s]
+Starting >>> ament_cmake_auto
+Finished <<< ament_cmake_uncrustify [1.62s]
+Starting >>> ament_cmake_clang_tidy
+Finished <<< ament_cmake_pep257 [1.79s]
+Starting >>> ament_cmake_mypy
+Finished <<< ament_cmake_cppcheck [2.00s]
+Starting >>> ament_cmake_pclint
+Finished <<< ament_cmake_cpplint [2.07s]
+Starting >>> ament_cmake_pycodestyle
+Finished <<< ament_cmake_flake8 [2.17s]
+Starting >>> ament_cmake_pyflakes
+Finished <<< ament_cmake_clang_format [2.16s]
+Finished <<< ament_cmake_xmllint [2.45s]
+Starting >>> ament_lint_common
+Finished <<< ament_cmake_auto [1.96s]
+Finished <<< ament_cmake_clang_tidy [1.91s]
+Finished <<< ament_cmake_mypy [1.89s]
+Finished <<< ament_cmake_pclint [1.71s]
+Finished <<< ament_cmake_pycodestyle [1.72s]
+Finished <<< ament_cmake_pyflakes [1.92s]
+Finished <<< ament_lint_common [1.82s]
+Starting >>> ament_cmake_ros
+Starting >>> ament_index_cpp
+Finished <<< ament_cmake_ros [1.64s]
+Finished <<< ament_index_cpp [3.15s]
+
+Summary: 61 packages finished [23.9s]
+  41 packages had stderr output: ament_cmake ament_cmake_auto ament_cmake_clang_format ament_cmake_clang_tidy ament_cmake_copyright ament_cmake_core ament_cmake_cppcheck ament_cmake_cpplint ament_cmake_export_definitions ament_cmake_export_dependencies ament_cmake_export_include_directories ament_cmake_export_interfaces ament_cmake_export_libraries ament_cmake_export_link_flags ament_cmake_export_targets ament_cmake_flake8 ament_cmake_gmock ament_cmake_google_benchmark ament_cmake_gtest ament_cmake_include_directories ament_cmake_libraries ament_cmake_lint_cmake ament_cmake_mypy ament_cmake_nose ament_cmake_pclint ament_cmake_pep257 ament_cmake_pycodestyle ament_cmake_pyflakes ament_cmake_pytest ament_cmake_python ament_cmake_ros ament_cmake_target_dependencies ament_cmake_test ament_cmake_uncrustify ament_cmake_vendor_package ament_cmake_version ament_cmake_xmllint ament_lint_auto ament_lint_common gmock_vendor gtest_vendor
+cd /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src; \
+unset AMENT_PREFIX_PATH; \
+PATH="/home/smr/esp/esp-idf/components/espcoredump:/home/smr/esp/esp-idf/components/partition_table:/home/smr/esp/esp-idf/components/app_update:/home/smr/esp/esp-idf/components/espcoredump:/home/smr/esp/esp-idf/components/partition_table:/home/smr/esp/esp-idf/components/app_update:/home/smr/.espressif/tools/xtensa-esp-elf-gdb/12.1_20221002/xtensa-esp-elf-gdb/bin:/home/smr/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin:/home/smr/.espressif/tools/riscv32-esp-elf/esp-12.2.0_20230208/riscv32-esp-elf/bin:/home/smr/.espressif/tools/esp32ulp-elf/2.35_20220830/esp32ulp-elf/bin:/home/smr/.espressif/tools/openocd-esp32/v0.12.0-esp32-20230921/openocd-esp32/bin:/home/smr/.espressif/python_env/idf5.1_py3.10_env/bin:/home/smr/esp/esp-idf/tools::/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin"; \
+. ../micro_ros_dev/install/local_setup.sh; \
+colcon build \
+	--merge-install \
+	--packages-ignore-regex=.*_cpp \
+	--metas /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/colcon.meta  \
+	--cmake-args \
+	"--no-warn-unused-cli" \
+	-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=OFF \
+	-DTHIRDPARTY=ON \
+	-DBUILD_SHARED_LIBS=OFF \
+	-DBUILD_TESTING=OFF \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DCMAKE_TOOLCHAIN_FILE=/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/esp32_toolchain.cmake \
+	-DCMAKE_VERBOSE_MAKEFILE=OFF \
+        -DIDF_INCLUDES='-I/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/include_override -I/home/smr/esp/esp-idf/components/xtensa/include -I/home/smr/esp/esp-idf/components/xtensa/esp32s3/include -I/home/smr/esp/esp-idf/components/esp_ringbuf/include -I/home/smr/esp/esp-idf/components/efuse/include -I/home/smr/esp/esp-idf/components/efuse/esp32s3/include -I/home/smr/esp/esp-idf/components/driver/include -I/home/smr/esp/esp-idf/components/driver/deprecated -I/home/smr/esp/esp-idf/components/driver/analog_comparator/include -I/home/smr/esp/esp-idf/components/driver/dac/include -I/home/smr/esp/esp-idf/components/driver/gpio/include -I/home/smr/esp/esp-idf/components/driver/gptimer/include -I/home/smr/esp/esp-idf/components/driver/i2c/include -I/home/smr/esp/esp-idf/components/driver/i2s/include -I/home/smr/esp/esp-idf/components/driver/ledc/include -I/home/smr/esp/esp-idf/components/driver/mcpwm/include -I/home/smr/esp/esp-idf/components/driver/parlio/include -I/home/smr/esp/esp-idf/components/driver/pcnt/include -I/home/smr/esp/esp-idf/components/driver/rmt/include -I/home/smr/esp/esp-idf/components/driver/sdio_slave/include -I/home/smr/esp/esp-idf/components/driver/sdmmc/include -I/home/smr/esp/esp-idf/components/driver/sigma_delta/include -I/home/smr/esp/esp-idf/components/driver/spi/include -I/home/smr/esp/esp-idf/components/driver/temperature_sensor/include -I/home/smr/esp/esp-idf/components/driver/touch_sensor/include -I/home/smr/esp/esp-idf/components/driver/twai/include -I/home/smr/esp/esp-idf/components/driver/uart/include -I/home/smr/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/smr/esp/esp-idf/components/driver/touch_sensor/esp32s3/include -I/home/smr/esp/esp-idf/components/esp_pm/include -I/home/smr/esp/esp-idf/components/mbedtls/port/include -I/home/smr/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/smr/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/smr/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/smr/esp/esp-idf/components/esp_app_format/include -I/home/smr/esp/esp-idf/components/bootloader_support/include -I/home/smr/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/smr/esp/esp-idf/components/esp_partition/include -I/home/smr/esp/esp-idf/components/app_update/include -I/home/smr/esp/esp-idf/components/esp_mm/include -I/home/smr/esp/esp-idf/components/spi_flash/include -I/home/smr/esp/esp-idf/components/pthread/include -I/home/smr/esp/esp-idf/components/esp_system/include -I/home/smr/esp/esp-idf/components/esp_rom/include -I/home/smr/esp/esp-idf/components/esp_rom/include/esp32s3 -I/home/smr/esp/esp-idf/components/esp_rom/esp32s3 -I/home/smr/esp/esp-idf/components/hal/esp32s3/include -I/home/smr/esp/esp-idf/components/hal/include -I/home/smr/esp/esp-idf/components/hal/platform_port/include -I/home/smr/esp/esp-idf/components/log/include -I/home/smr/esp/esp-idf/components/heap/include -I/home/smr/esp/esp-idf/components/soc/include -I/home/smr/esp/esp-idf/components/soc/esp32s3 -I/home/smr/esp/esp-idf/components/soc/esp32s3/include -I/home/smr/esp/esp-idf/components/esp_hw_support/include -I/home/smr/esp/esp-idf/components/esp_hw_support/include/soc -I/home/smr/esp/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/smr/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/smr/esp/esp-idf/components/freertos/esp_additions/include/freertos -I/home/smr/esp/esp-idf/components/freertos/esp_additions/include -I/home/smr/esp/esp-idf/components/freertos/esp_additions/arch/xtensa/include -I/home/smr/esp/esp-idf/components/newlib/platform_include -I/home/smr/esp/esp-idf/components/esp_common/include -I/home/smr/esp/esp-idf/components/esp_timer/include -I/home/smr/esp/esp-idf/components/app_trace/include -I/home/smr/esp/esp-idf/components/esp_event/include -I/home/smr/esp/esp-idf/components/nvs_flash/include -I/home/smr/esp/esp-idf/components/nvs_flash/../spi_flash/include -I/home/smr/esp/esp-idf/components/esp_phy/include -I/home/smr/esp/esp-idf/components/esp_phy/esp32s3/include -I/home/smr/esp/esp-idf/components/vfs/include -I/home/smr/esp/esp-idf/components/lwip/include -I/home/smr/esp/esp-idf/components/lwip/include/apps -I/home/smr/esp/esp-idf/components/lwip/include/apps/sntp -I/home/smr/esp/esp-idf/components/lwip/lwip/src/include -I/home/smr/esp/esp-idf/components/lwip/port/include -I/home/smr/esp/esp-idf/components/lwip/port/freertos/include/ -I/home/smr/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/smr/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/smr/esp/esp-idf/components/esp_netif/include -I/home/smr/esp/esp-idf/components/wpa_supplicant/include -I/home/smr/esp/esp-idf/components/wpa_supplicant/port/include -I/home/smr/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/smr/esp/esp-idf/components/esp_coex/include -I/home/smr/esp/esp-idf/components/esp_wifi/include -I/home/smr/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/smr/esp/esp-idf/components/unity/include -I/home/smr/esp/esp-idf/components/unity/unity/src -I/home/smr/esp/esp-idf/components/cmock/CMock/src -I/home/smr/esp/esp-idf/components/console/. -I/home/smr/esp/esp-idf/components/http_parser/. -I/home/smr/esp/esp-idf/components/esp-tls/. -I/home/smr/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/smr/esp/esp-idf/components/esp_adc/include -I/home/smr/esp/esp-idf/components/esp_adc/interface -I/home/smr/esp/esp-idf/components/esp_adc/esp32s3/include -I/home/smr/esp/esp-idf/components/esp_adc/deprecated/include -I/home/smr/esp/esp-idf/components/esp_eth/include -I/home/smr/esp/esp-idf/components/esp_gdbstub/include -I/home/smr/esp/esp-idf/components/esp_hid/include -I/home/smr/esp/esp-idf/components/tcp_transport/include -I/home/smr/esp/esp-idf/components/esp_http_client/include -I/home/smr/esp/esp-idf/components/esp_http_server/include -I/home/smr/esp/esp-idf/components/esp_https_ota/include -I/home/smr/esp/esp-idf/components/esp_psram/include -I/home/smr/esp/esp-idf/components/esp_lcd/include -I/home/smr/esp/esp-idf/components/esp_lcd/interface -I/home/smr/esp/esp-idf/components/protobuf-c/protobuf-c -I/home/smr/esp/esp-idf/components/protocomm/include/common -I/home/smr/esp/esp-idf/components/protocomm/include/security -I/home/smr/esp/esp-idf/components/protocomm/include/transports -I/home/smr/esp/esp-idf/components/esp_local_ctrl/include -I/home/smr/esp/esp-idf/components/espcoredump/include -I/home/smr/esp/esp-idf/components/espcoredump/include/port/xtensa -I/home/smr/esp/esp-idf/components/wear_levelling/include -I/home/smr/esp/esp-idf/components/sdmmc/include -I/home/smr/esp/esp-idf/components/fatfs/diskio -I/home/smr/esp/esp-idf/components/fatfs/vfs -I/home/smr/esp/esp-idf/components/fatfs/src -I/home/smr/esp/esp-idf/components/idf_test/include -I/home/smr/esp/esp-idf/components/idf_test/include/esp32s3 -I/home/smr/esp/esp-idf/components/ieee802154/include -I/home/smr/esp/esp-idf/components/json/cJSON -I/home/smr/esp/esp-idf/components/mqtt//home/smr/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/smr/esp/esp-idf/components/perfmon/include -I/home/smr/esp/esp-idf/components/spiffs/include -I/home/smr/esp/esp-idf/components/touch_element/include -I/home/smr/esp/esp-idf/components/ulp/ulp_common/include -I/home/smr/esp/esp-idf/components/ulp/ulp_common/include/esp32s3 -I/home/smr/esp/esp-idf/components/usb/include -I/home/smr/esp/esp-idf/components/wifi_provisioning/include -I/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main/. -I/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/network_interfaces' \
+	-DCMAKE_C_STANDARD=17 \
+	-DUCLIENT_C_STANDARD=17;
+Starting >>> rcutils
+Starting >>> rosidl_cli
+Starting >>> rosidl_typesupport_interface
+Starting >>> microcdr
+Starting >>> test_interface_files
+Starting >>> rmw_implementation_cmake
+Starting >>> tracetools
+Starting >>> tracetools_trace
+Finished <<< rosidl_typesupport_interface [1.79s]
+Starting >>> tracetools_read
+Finished <<< rmw_implementation_cmake [2.32s]
+Finished <<< test_interface_files [2.39s]
+Finished <<< tracetools_trace [2.65s]
+Starting >>> tracetools_launch
+Starting >>> ros2trace
+Finished <<< rosidl_cli [4.26s]
+Starting >>> rosidl_adapter
+Finished <<< tracetools [4.38s]
+Finished <<< microcdr [4.84s]
+Starting >>> microxrcedds_client
+Finished <<< tracetools_read [3.16s]
+Finished <<< rcutils [5.12s]
+Starting >>> rosidl_runtime_c
+Starting >>> rcl_logging_interface
+Finished <<< ros2trace [3.26s]
+Finished <<< tracetools_launch [3.53s]
+Starting >>> tracetools_test
+Finished <<< rosidl_adapter [2.98s]
+Starting >>> rosidl_parser
+Finished <<< microxrcedds_client [3.49s]
+Finished <<< tracetools_test [2.13s]
+Finished <<< rcl_logging_interface [3.28s]
+Starting >>> rcl_logging_noop
+Finished <<< rosidl_runtime_c [3.42s]
+Starting >>> rmw
+Finished <<< rosidl_parser [2.45s]
+Starting >>> rosidl_cmake
+Finished <<< rcl_logging_noop [2.49s]
+Finished <<< rmw [3.07s]
+Finished <<< rosidl_cmake [2.35s]
+Starting >>> rosidl_typesupport_introspection_c
+Starting >>> rosidl_typesupport_microxrcedds_c
+Starting >>> rosidl_generator_c
+Finished <<< rosidl_typesupport_microxrcedds_c [2.48s]
+Finished <<< rosidl_typesupport_introspection_c [2.55s]
+Starting >>> rosidl_typesupport_c
+Starting >>> micro_ros_utilities
+Finished <<< rosidl_generator_c [2.56s]
+Starting >>> rosidl_typesupport_introspection_tests
+Finished <<< rosidl_typesupport_introspection_tests [2.04s]
+Finished <<< micro_ros_utilities [2.97s]
+Finished <<< rosidl_typesupport_c [3.07s]
+Starting >>> rosidl_default_generators
+Starting >>> rosidl_default_runtime
+Finished <<< rosidl_default_runtime [1.38s]
+Finished <<< rosidl_default_generators [1.42s]
+Starting >>> builtin_interfaces
+Starting >>> micro_ros_msgs
+Starting >>> unique_identifier_msgs
+Starting >>> lifecycle_msgs
+Starting >>> std_srvs
+Finished <<< unique_identifier_msgs [6.42s]
+Finished <<< builtin_interfaces [6.75s]
+Starting >>> std_msgs
+Starting >>> action_msgs
+Starting >>> rcl_interfaces
+Starting >>> rosgraph_msgs
+Starting >>> statistics_msgs
+Finished <<< micro_ros_msgs [7.07s]
+Starting >>> rmw_microxrcedds
+Finished <<< std_srvs [7.19s]
+Finished <<< lifecycle_msgs [12.3s]
+Finished <<< rmw_microxrcedds [5.73s]
+Starting >>> rmw_implementation
+Starting >>> rosidl_typesupport_microxrcedds_test_msg
+Finished <<< rosgraph_msgs [9.12s]
+Finished <<< rosidl_typesupport_microxrcedds_test_msg [4.14s]
+Starting >>> rosidl_typesupport_microxrcedds_c_tests
+Finished <<< rmw_implementation [4.60s]
+Finished <<< action_msgs [11.7s]
+Starting >>> test_msgs
+Starting >>> example_interfaces
+Finished <<< statistics_msgs [11.8s]
+Finished <<< rosidl_typesupport_microxrcedds_c_tests [3.99s]
+Finished <<< rcl_interfaces [20.4s]
+Starting >>> composition_interfaces
+Finished <<< std_msgs [22.7s]
+Starting >>> geometry_msgs
+Starting >>> actionlib_msgs
+Starting >>> test_tracetools
+Finished <<< test_tracetools [4.30s]
+Starting >>> test_tracetools_launch
+Finished <<< composition_interfaces [12.0s]
+Finished <<< test_tracetools_launch [6.00s]
+Finished <<< actionlib_msgs [12.7s]
+Finished <<< test_msgs [29.0s]
+Starting >>> rcl
+Starting >>> test_rmw_implementation
+Finished <<< test_rmw_implementation [3.52s]
+Finished <<< example_interfaces [32.7s]
+Finished <<< rcl [5.66s]
+Starting >>> rcl_action
+Starting >>> rcl_lifecycle
+Finished <<< geometry_msgs [24.1s]
+Starting >>> sensor_msgs
+Starting >>> diagnostic_msgs
+Starting >>> nav_msgs
+Starting >>> shape_msgs
+Starting >>> trajectory_msgs
+Finished <<< rcl_lifecycle [4.02s]
+Finished <<< rcl_action [4.38s]
+Starting >>> rclc
+Finished <<< trajectory_msgs [10.1s]
+Finished <<< shape_msgs [10.7s]
+Finished <<< rclc [6.85s]
+Starting >>> rclc_lifecycle
+Starting >>> rclc_parameter
+Finished <<< diagnostic_msgs [11.4s]
+Finished <<< nav_msgs [13.2s]
+Finished <<< rclc_lifecycle [4.56s]
+Finished <<< rclc_parameter [4.61s]
+Finished <<< sensor_msgs [23.5s]
+Starting >>> stereo_msgs
+Starting >>> visualization_msgs
+Starting >>> sensor_msgs_py
+Finished <<< sensor_msgs_py [2.01s]
+Finished <<< stereo_msgs [5.27s]
+Finished <<< visualization_msgs [11.9s]
+Starting >>> common_interfaces
+Finished <<< common_interfaces [1.52s]
+
+Summary: 65 packages finished [1min 50s]
+  39 packages had stderr output: action_msgs actionlib_msgs builtin_interfaces composition_interfaces diagnostic_msgs example_interfaces geometry_msgs lifecycle_msgs micro_ros_msgs micro_ros_utilities microxrcedds_client nav_msgs rcl rcl_action rcl_interfaces rcl_lifecycle rcl_logging_interface rcl_logging_noop rclc rclc_lifecycle rclc_parameter rcutils rmw rmw_implementation rmw_microxrcedds rosgraph_msgs rosidl_runtime_c rosidl_typesupport_c rosidl_typesupport_microxrcedds_c sensor_msgs shape_msgs statistics_msgs std_msgs std_srvs stereo_msgs test_msgs trajectory_msgs unique_identifier_msgs visualization_msgs
+mkdir -p /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/libmicroros; cd /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/libmicroros; \
+for file in $(find /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/lib/ -name '*.a'); do \
+	folder=$(echo $file | sed -E "s/(.+)\/(.+).a/\2/"); \
+	mkdir -p $folder; cd $folder; /home/smr/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-ar x $file; \
+	for f in *; do \
+		mv $f ../$folder-$f; \
+	done; \
+	cd ..; rm -rf $folder; \
+done ; \
+/home/smr/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-ar rc -s libmicroros.a *.obj; cp libmicroros.a /home/smr/esp/Samples/extra_components/micro_ros_espidf_component; \
+cd ..; rm -rf libmicroros; \
+cp -R /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/micro_ros_src/install/include /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/include;
+-- Components: app_trace app_update bootloader bootloader_support bt car_motion cmock console cxx driver efuse encoder esp-tls esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__bdc_motor espressif__pid_ctrl esptool_py fatfs freertos hal heap http_parser i2c_master icm42670p idf_test ieee802154 inv_imu json log lwip main mbedtls micro_ros_espidf_component motor mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread pwm_motor sdmmc soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/smr/esp/esp-idf/components/app_trace /home/smr/esp/esp-idf/components/app_update /home/smr/esp/esp-idf/components/bootloader /home/smr/esp/esp-idf/components/bootloader_support /home/smr/esp/esp-idf/components/bt /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/car_motion /home/smr/esp/esp-idf/components/cmock /home/smr/esp/esp-idf/components/console /home/smr/esp/esp-idf/components/cxx /home/smr/esp/esp-idf/components/driver /home/smr/esp/esp-idf/components/efuse /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/encoder /home/smr/esp/esp-idf/components/esp-tls /home/smr/esp/esp-idf/components/esp_adc /home/smr/esp/esp-idf/components/esp_app_format /home/smr/esp/esp-idf/components/esp_coex /home/smr/esp/esp-idf/components/esp_common /home/smr/esp/esp-idf/components/esp_eth /home/smr/esp/esp-idf/components/esp_event /home/smr/esp/esp-idf/components/esp_gdbstub /home/smr/esp/esp-idf/components/esp_hid /home/smr/esp/esp-idf/components/esp_http_client /home/smr/esp/esp-idf/components/esp_http_server /home/smr/esp/esp-idf/components/esp_https_ota /home/smr/esp/esp-idf/components/esp_https_server /home/smr/esp/esp-idf/components/esp_hw_support /home/smr/esp/esp-idf/components/esp_lcd /home/smr/esp/esp-idf/components/esp_local_ctrl /home/smr/esp/esp-idf/components/esp_mm /home/smr/esp/esp-idf/components/esp_netif /home/smr/esp/esp-idf/components/esp_netif_stack /home/smr/esp/esp-idf/components/esp_partition /home/smr/esp/esp-idf/components/esp_phy /home/smr/esp/esp-idf/components/esp_pm /home/smr/esp/esp-idf/components/esp_psram /home/smr/esp/esp-idf/components/esp_ringbuf /home/smr/esp/esp-idf/components/esp_rom /home/smr/esp/esp-idf/components/esp_system /home/smr/esp/esp-idf/components/esp_timer /home/smr/esp/esp-idf/components/esp_wifi /home/smr/esp/esp-idf/components/espcoredump /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/managed_components/espressif__bdc_motor /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/managed_components/espressif__pid_ctrl /home/smr/esp/esp-idf/components/esptool_py /home/smr/esp/esp-idf/components/fatfs /home/smr/esp/esp-idf/components/freertos /home/smr/esp/esp-idf/components/hal /home/smr/esp/esp-idf/components/heap /home/smr/esp/esp-idf/components/http_parser /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/i2c_master /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/icm42670p /home/smr/esp/esp-idf/components/idf_test /home/smr/esp/esp-idf/components/ieee802154 /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/inv_imu /home/smr/esp/esp-idf/components/json /home/smr/esp/esp-idf/components/log /home/smr/esp/esp-idf/components/lwip /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/main /home/smr/esp/esp-idf/components/mbedtls /home/smr/esp/Samples/extra_components/micro_ros_espidf_component /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/motor /home/smr/esp/esp-idf/components/mqtt /home/smr/esp/esp-idf/components/newlib /home/smr/esp/esp-idf/components/nvs_flash /home/smr/esp/esp-idf/components/openthread /home/smr/esp/esp-idf/components/partition_table /home/smr/esp/esp-idf/components/perfmon /home/smr/esp/esp-idf/components/protobuf-c /home/smr/esp/esp-idf/components/protocomm /home/smr/esp/esp-idf/components/pthread /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/components/pwm_motor /home/smr/esp/esp-idf/components/sdmmc /home/smr/esp/esp-idf/components/soc /home/smr/esp/esp-idf/components/spi_flash /home/smr/esp/esp-idf/components/spiffs /home/smr/esp/esp-idf/components/tcp_transport /home/smr/esp/esp-idf/components/touch_element /home/smr/esp/esp-idf/components/ulp /home/smr/esp/esp-idf/components/unity /home/smr/esp/esp-idf/components/usb /home/smr/esp/esp-idf/components/vfs /home/smr/esp/esp-idf/components/wear_levelling /home/smr/esp/esp-idf/components/wifi_provisioning /home/smr/esp/esp-idf/components/wpa_supplicant /home/smr/esp/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build

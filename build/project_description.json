@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "main",
-    "project_version":    "a3ab381-dirty",
+    "project_version":    "b30eaae-dirty",
     "project_path":       "/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive",
     "idf_path":           "/home/smr/esp/esp-idf",
     "build_dir":          "/home/smr/esp/Samples/extra_components/micro_ros_espidf_component/microros_esp32_diffdrive/build",

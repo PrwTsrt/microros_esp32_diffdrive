@@ -78,10 +78,12 @@ static void Motor_PID_Ctrl(void)
 static void Motor_Task(void *arg)
 {
     ESP_LOGI(TAG, "Start Motor_Task with core:%d", xPortGetCoreID());
-    pid_runtime_param.kp = 2.61;
-    // pid_runtime_param.kp = 5;
-    pid_runtime_param.ki = 0.8568;
-    pid_runtime_param.kd = 0;
+    // pid_runtime_param.kp = 2.61;
+    // pid_runtime_param.ki = 0.8568;
+    // pid_runtime_param.kd = 0;
+    pid_runtime_param.kp = 3.48;
+    pid_runtime_param.ki = 1.428;
+    pid_runtime_param.kd = 0.1751;
     pid_runtime_param.cal_type = PID_CAL_TYPE_INCREMENTAL;
     pid_runtime_param.max_output   = PWM_MOTOR_MAX_VALUE;
     pid_runtime_param.min_output   = -PWM_MOTOR_MAX_VALUE;

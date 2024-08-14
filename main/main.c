@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "math.h"
+#include <stdlib.h>
+#include <time.h>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -23,6 +25,7 @@
 #include <geometry_msgs/msg/twist.h>
 #include <std_msgs/msg/bool.h>
 #include <sensor_msgs/msg/imu.h>
+#include <sensor_msgs/msg/range.h>
 #include <nav_msgs/msg/odometry.h>
 
 #include "esp32_serial_transport.h"
@@ -46,10 +49,16 @@ rcl_subscription_t twist_subscriber;
 rcl_subscription_t bumper_state_subscriber;
 rcl_publisher_t publisher_imu;
 rcl_publisher_t publisher_odom;
+//////////////////////////////////////////////////////
+// rcl_publisher_t publisher_range_left, publisher_range_center, publisher_range_right, publisher_bump_state;
+/////////////////////////////////////////////////////
 sensor_msgs__msg__Imu msg_imu;
 geometry_msgs__msg__Twist twist_msg;
 nav_msgs__msg__Odometry msg_odom;
 std_msgs__msg__Bool msg_bumper;
+//////////////////////////////////////////////////////
+// sensor_msgs__msg__Range msg_range_left, msg_range_center, msg_range_right;
+/////////////////////////////////////////////////////
 
 rclc_executor_t executor;
 rclc_support_t support;
@@ -57,11 +66,14 @@ rcl_allocator_t allocator;
 rcl_node_t node;
 rcl_timer_t timer_imu;
 rcl_timer_t timer_odom;
+rcl_timer_t timer_control;
+// rcl_timer_t timer_range;
 
 rcl_init_options_t init_options;
 
 unsigned long long time_offset = 0;
 unsigned long prev_odom_update = 0;
+unsigned long prev_cmd_time = 0;
 
 float x_pos_ = 0.0;
 float y_pos_ = 0.0;
@@ -85,6 +97,54 @@ enum states {
     AGENT_CONNECTED,
     AGENT_DISCONNECTED
 }state ; 
+
+bool bumper_state;
+bool flag;
+
+//////////////////////////////////////////////////////
+// unsigned long previousMillis = 0;
+// float range[3];
+
+// // Initialize msg information for range
+// void range_msgs_init(sensor_msgs__msg__Range* range_msg, const char *frame_id_name){
+//   range_msg->header.frame_id = micro_ros_string_utilities_set(range_msg->header.frame_id, frame_id_name);
+//   range_msg->radiation_type = sensor_msgs__msg__Range__ULTRASOUND;
+//   range_msg->field_of_view = 15 * (3.14/180); // rad
+//   range_msg->min_range = 0.03; // m
+//   range_msg->max_range = 4.0; // m  
+// }
+
+// // Range finder update data task
+// void range_finder_update_data_task(void *arg)
+// {
+//   int period = 45;
+//   float lower = 0.0;
+//   float upper = 1.0;
+
+//   while (1)
+//   {
+//     // unsigned long currentMillis = millis();
+//     // unsigned long currentMillis = esp_timer_get_time()/1000;
+    
+//     // if(currentMillis - previousMillis > period){
+//         // srand(time(NULL));
+//         for (int i = 0; i < 3; i++){
+//         // range[i] = ((float) rand() / RAND_MAX) * (upper - lower) + lower;
+//             range[i] = range[i] + 0.01;
+//             if(range[i] > 1.0){
+//                 range[i] = 0;
+//             }
+//         }
+//         msg_range_left.range =range[0];
+//         msg_range_center.range = range[1];
+//         msg_range_right.range = range[2];
+//     // }
+//     // previousMillis = currentMillis;  
+//     vTaskDelay(45 / portTICK_PERIOD_MS);    
+//   }
+//   vTaskDelete(NULL);
+// }
+//////////////////////////////////////////////////////
 
 // Initializes the ROS topic information for odom
 void odom_ros_init(void)
@@ -310,6 +370,18 @@ void timer_odom_callback(rcl_timer_t *timer, int64_t last_call_time)
 
     }
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// void timer_rangefinder_callback(rcl_timer_t *timer, int64_t last_call_time)
+// {
+//     RCLC_UNUSED(last_call_time);
+//     if (timer != NULL)
+//     {
+//         RCSOFTCHECK(rcl_publish(&publisher_range_left, &msg_range_left, NULL));
+//         RCSOFTCHECK(rcl_publish(&publisher_range_center, &msg_range_center, NULL));
+//         RCSOFTCHECK(rcl_publish(&publisher_range_right, &msg_range_right, NULL));
+//     }
+// }
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Timer callback function
 void timer_imu_callback(rcl_timer_t *timer, int64_t last_call_time)
@@ -324,12 +396,56 @@ void timer_imu_callback(rcl_timer_t *timer, int64_t last_call_time)
     }
 }
 
+void moveBase()
+{   
+    float x = 0.0, y = 0.0 , z= 0.0;
+    // brake if there's no command received, or when it's only the first command sent
+    if(((get_millisecond() - prev_cmd_time) >= 500) || bumper_state) 
+    // if(((get_millisecond() - prev_cmd_time) >= 500) || bumper_state || flag == 0) 
+    {
+        twist_msg.linear.x = 0.0;
+        twist_msg.linear.y = 0.0;
+        twist_msg.angular.z = 0.0;
+        // if(flag == 0)
+        // {
+        //     flag = 1;
+        // }
+        // else
+        // {
+        //     flag = 0;          
+        // }
+    }
+    else{
+        x = twist_msg.linear.x;
+        y = twist_msg.linear.y;
+        z = twist_msg.angular.z;
+    }
+    Motion_Ctrl(x, y, z);
+}
+
+void controlCallback(rcl_timer_t * timer, int64_t last_call_time) 
+{
+    RCLC_UNUSED(last_call_time);
+    if (timer != NULL) 
+    {
+       moveBase();
+    }
+}
+
 void twist_Callback(const void *msgin)
 {
-    ESP_LOGI(TAG, "cmd_vel:%.2f, %.2f, %.2f", twist_msg.linear.x, twist_msg.linear.y, twist_msg.angular.z);
-    // msg_bumper.data ? Motion_Ctrl(0, 0, 0) : Motion_Ctrl(twist_msg.linear.x, 0, twist_msg.angular.z);
-    if((msg_bumper.data) && (twist_msg.linear.x > 0||twist_msg.angular.z != 0)){twist_msg.linear.x = 0; twist_msg.angular.z = 0;}
-    Motion_Ctrl(twist_msg.linear.x, 0, twist_msg.angular.z);
+    // ESP_LOGI(TAG, "cmd_vel:%.2f, %.2f, %.2f", twist_msg.linear.x, twist_msg.linear.y, twist_msg.angular.z);
+    // bumper_state ? Motion_Stop(bumper_state) : Motion_Ctrl(twist_msg.linear.x, 0, twist_msg.angular.z);
+    // Motion_Ctrl(twist_msg.linear.x, 0, twist_msg.angular.z);
+    // if((bumper_state) && (twist_msg.linear.x > 0||twist_msg.angular.z != 0)){twist_msg.linear.x = 0; twist_msg.angular.z = 0;}
+    // Motion_Ctrl(twist_msg.linear.x, 0, twist_msg.angular.z);
+
+    prev_cmd_time = get_millisecond();
+}
+
+void bumper_Callback(const void *msgin)
+{
+    bumper_state = msg_bumper.data;
 }
 
 bool create_entities(void) {
@@ -376,27 +492,61 @@ bool create_entities(void) {
         ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Bool),
         "bumper_state"));
 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // RCCHECK(rclc_publisher_init_default(
+    //     &publisher_range_left,
+    //     &node,
+    //     ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Range),
+    //     "range_left"));
+    // RCCHECK(rclc_publisher_init_default(
+    //     &publisher_range_center,
+    //     &node,
+    //     ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Range),
+    //     "range_center"));
+    // RCCHECK(rclc_publisher_init_default(
+    //     &publisher_range_right,
+    //     &node,
+    //     ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Range),
+    //     "range_right"));
+    ///////////////////////////////////////////////////////////////////////////////////////
+
     // create timer. Set the publish frequency to 20HZ
-    const unsigned int timer_timeout = 25;
+    const unsigned int timer_timeout = 5;
     RCCHECK(rclc_timer_init_default(
         &timer_imu,
         &support,
         RCL_MS_TO_NS(timer_timeout),
         timer_imu_callback));
     RCCHECK(rclc_timer_init_default(
+        &timer_control,
+        &support,
+        RCL_MS_TO_NS(timer_timeout),
+        controlCallback));
+    RCCHECK(rclc_timer_init_default(
         &timer_odom,
         &support,
         RCL_MS_TO_NS(timer_timeout),
         timer_odom_callback));
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // RCCHECK(rclc_timer_init_default(
+    //     &timer_range,
+    //     &support,
+    //     RCL_MS_TO_NS(timer_timeout),
+    //     timer_rangefinder_callback));
+    ///////////////////////////////////////////////////////////////////////////////////////
 
     // create executor. Three of the parameters are the number of actuators controlled that is greater than or equal to the number of subscribers and publishers added to the executor.
-    int handle_num = 4;
+    int handle_num = 5;
     executor = rclc_executor_get_zero_initialized_executor();
     RCCHECK(rclc_executor_init(&executor, &support.context, handle_num, &allocator));
         
     // Adds the publishers's timer to the executor
     RCCHECK(rclc_executor_add_timer(&executor, &timer_imu));
     RCCHECK(rclc_executor_add_timer(&executor, &timer_odom));
+    RCCHECK(rclc_executor_add_timer(&executor, &timer_control));
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // RCCHECK(rclc_executor_add_timer(&executor, &timer_range));
+    ///////////////////////////////////////////////////////////////////////////////////////
 
     // Add a subscriber twist to the executor
     RCCHECK(rclc_executor_add_subscription(
@@ -410,7 +560,7 @@ bool create_entities(void) {
         &executor,
         &bumper_state_subscriber,
         &msg_bumper,
-        &twist_Callback,
+        &bumper_Callback,
         ON_NEW_DATA));
         
     sync_time();
@@ -428,9 +578,16 @@ void destroy_entities(void) {
     RCCHECK(rcl_subscription_fini(&bumper_state_subscriber, &node));
     RCCHECK(rcl_publisher_fini(&publisher_odom, &node));
     RCCHECK(rcl_publisher_fini(&publisher_imu, &node));
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // RCCHECK(rcl_publisher_fini(&publisher_range_left, &node));
+    // RCCHECK(rcl_publisher_fini(&publisher_range_center, &node));
+    // RCCHECK(rcl_publisher_fini(&publisher_range_right, &node));
+    // RCCHECK(rcl_timer_fini(&timer_range));
+    ///////////////////////////////////////////////////////////////////////////////////////
     RCCHECK(rcl_node_fini(&node));
     RCCHECK(rcl_timer_fini(&timer_imu));
     RCCHECK(rcl_timer_fini(&timer_odom));
+    RCCHECK(rcl_timer_fini(&timer_control));
     RCCHECK(rclc_executor_fini(&executor));
     RCCHECK(rclc_support_fini(&support)); 
     }
@@ -501,9 +658,21 @@ void app_main(void)
 
     odom_ros_init();
 
+    // range_msgs_init(&msg_range_left, "ranger_left_frame");
+    // range_msgs_init(&msg_range_center, "ranger_center_frame");
+    // range_msgs_init(&msg_range_right, "ranger_right_frame");
+
     // Initialize the IMU
     Icm42670p_Init();
-    imu_ros_init();
+    //////////////////////////////////////////////////////
+    // imu_ros_init();
+    // xTaskCreatePinnedToCore(range_finder_update_data_task,
+    //             "range_finder_update_data_task",
+    //             CONFIG_MICRO_ROS_APP_STACK,
+    //             NULL,
+    //             CONFIG_MICRO_ROS_APP_TASK_PRIO,
+    //             NULL, 0);
+    //////////////////////////////////////////////////////
 
     xTaskCreatePinnedToCore(micro_ros_task,
                 "micro_ros_task",
